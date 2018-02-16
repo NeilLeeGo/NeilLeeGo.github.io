@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-tw">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="安裝java執行環境  安裝MySQL Server  (Ubuntu)可至Ubuntu軟體中心 ,下載並安裝MySQL伺服器與MySQL管理員進行管理  設定MySQL mysql -u root -p CREATE USER &amp;apos;gerrit&amp;apos;@&amp;apos;localhost&amp;apos; INDENTIFIED BY &amp;apos;secret&amp;apos;; CREATE D">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gerrit Server - Code Review Server on Linux">
+<meta property="og:url" content="http://yoursite.com/2018/02/13/Linux-Git-Gerrit-Server-Code-Review-Server/index.html">
+<meta property="og:site_name" content="Neil&#39;s Blog">
+<meta property="og:description" content="安裝java執行環境  安裝MySQL Server  (Ubuntu)可至Ubuntu軟體中心 ,下載並安裝MySQL伺服器與MySQL管理員進行管理  設定MySQL mysql -u root -p CREATE USER &amp;apos;gerrit&amp;apos;@&amp;apos;localhost&amp;apos; INDENTIFIED BY &amp;apos;secret&amp;apos;; CREATE D">
+<meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2018-02-13T10:00:05.118Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Gerrit Server - Code Review Server on Linux">
+<meta name="twitter:description" content="安裝java執行環境  安裝MySQL Server  (Ubuntu)可至Ubuntu軟體中心 ,下載並安裝MySQL伺服器與MySQL管理員進行管理  設定MySQL mysql -u root -p CREATE USER &amp;apos;gerrit&amp;apos;@&amp;apos;localhost&amp;apos; INDENTIFIED BY &amp;apos;secret&amp;apos;; CREATE D">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/02/13/Linux-Git-Gerrit-Server-Code-Review-Server/"/>
+
+
+
+
+
+  <title>Gerrit Server - Code Review Server on Linux | Neil's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Neil's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首頁
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            關於
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分類
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            歸檔
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/13/Linux-Git-Gerrit-Server-Code-Review-Server/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Neil Lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Gerrit Server - Code Review Server on Linux</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-13T10:20:29+08:00">
+                2018-02-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Software-engineering/" itemprop="url" rel="index">
+                    <span itemprop="name">Software engineering</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Software-engineering/Revision-control/" itemprop="url" rel="index">
+                    <span itemprop="name">Revision control</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Software-engineering/Revision-control/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <ol>
+<li><p>安裝java執行環境</p>
+</li>
+<li><p>安裝MySQL Server</p>
+<ul>
+<li><p>(Ubuntu)可至Ubuntu軟體中心 ,下載並安裝MySQL伺服器與MySQL管理員進行管理</p>
+</li>
+<li><p>設定MySQL</p>
+<pre><code>mysql -u root -p
+CREATE USER &apos;gerrit&apos;@&apos;localhost&apos; INDENTIFIED BY &apos;secret&apos;;
+CREATE DATABASE reviewdb;
+ALTER DATABASE reviewdb charset=latin1;
+GRANT ALL ON reviewdb.* TO &apos;gerrit&apos;@&apos;localhost&apos;;
+FLUSH PRIVILEGES;
+</code></pre></li>
+</ul>
+</li>
+<li><p>安裝Apache Server</p>
+<ul>
+<li><p>安裝Apache Server</p>
+<pre><code>sudo apt-get install apache2 apache2-dev
+</code></pre></li>
+<li><p>安裝Apache proxy模組</p>
+<pre><code>sudo a2nemod proxy
+sudo a2nemod proxy_http
+</code></pre></li>
+<li><p>設定Apache Server代理登錄</p>
+<pre><code>vim /etc/apache2/sites-available/default
+</code></pre><p>或</p>
+<pre><code>vim /etc/apache2/httpd.conf
+</code></pre>  <!-- -->
+<pre><code>Listen 8082
+Listen 8083
+Listen 8084
+&lt;VirtualHost *:8082&gt;
+  ServerName localhost
+  ProxyRequests Off
+  ProxyVia Off
+  ProxyPreserveHost On
+  &lt;Proxy *&gt;
+     Order deny,allow
+     Allow from all
+  &lt;/Proxy&gt;
+  &lt;Location /login/&gt;
+     AuthType Basic
+     AuthName &quot;Gerrit Code Review&quot;
+     AuthBasicProvider file
+     AuthUserFile /home/gerrit/review_site/etc/gerrit.passwd
+     Require valid-user
+  &lt;/Location&gt;
+  AllowEncodedSlashes On
+  ProxyPass / http://localhost:8081/ nocanon
+&lt;/VirtualHost&gt;
+&lt;VirtualHost *:8083&gt;
+  ServerName Redmine
+  DocumentRoot /home/redmine/redmine_site/public/
+  &lt;Directory /home/redmine/redmine_site/public/&gt;
+     Options Indexes ExecCGI FollowSymLinks
+     Order allow,deny
+     Allow from all
+     AllowOverride all
+  &lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+&lt;VirtualHost *:8084&gt;
+  ServerName PhpMyAdmin
+  DocumentRoot /usr/share/phpmyadmin
+  &lt;Directory /usr/share/phpmyadmin&gt;
+     Options Indexes ExecCGI FollowSymLinks
+     Order allow,deny
+     Allow from all
+     AllowOverride all
+  &lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+</code></pre></li>
+<li><p>啟動Apache Server</p>
+<pre><code>sudo /etc/init.d/apache2 restart
+</code></pre></li>
+</ul>
+</li>
+<li><p>安裝Gerrit Server</p>
+<ul>
+<li><p>建立Gerrit專用帳號</p>
+<p>  sudo adduser gerrit<br>  sudo su gerrit<br>  cd ~gerrit</p>
+</li>
+<li><p>安裝Gerrit V2.7 (下載Gerrit的.war包至/home/gerrit)</p>
+<p>  java -jar gerrit-2.7.war init -d review_site</p>
+</li>
+<li><p>設定Gerrit Server</p>
+<pre><code>vim /home/gerrit/review_site/etc/gerrit.config
+</code></pre>  <!-- -->
+<pre><code>[gerrit]
+        basePath = git
+        canonicalWebUrl = http://220.132.142.166:8082/
+[database]
+        type = mysql
+        hostname = localhost
+        database = reviewdb
+        username = gerrit
+[auth]
+        type = HTTP
+[sendemail]
+        smtpServer = smtp.gmail.com
+        smtpServerPort = 465
+        smtpEncryption = SSL
+        smtpUser = xunyi.lee@gmail.com
+[container]
+        user = gerrit
+        javaHome = /usr/lib/jvm/java-7-oracle/jre
+[sshd]
+        listenAddress = *:29418
+[httpd]
+        listenUrl = proxy-http://localhost:8081/
+[cache]
+        directory = cache
+[gitweb]
+        cgi = /usr/share/gitweb/index.cgi
+</code></pre></li>
+<li><p>增加Gerrit 用戶</p>
+<pre><code>sudo htpasswd -c /home/gerrit/review_site/etc/gerrit.passwd 用戶名稱
+</code></pre></li>
+<li><p>啟動Gerrir Server</p>
+<pre><code>vim /home/gerrit/review_site/bin/gerrit.sh
+</code></pre>  <!-- -->
+<pre><code>GERRIT_SITE=/home/gerrit/review_site
+NO_START=0
+</code></pre>  <!-- -->
+<pre><code>/home/gerrit/review_site/bin/gerrit.sh restart
+sudo ln -s /home/gerrit/review_site/bin/gerrit.sh /etc/init.d/
+sudo /etc/init.d/gerrit.sh restart
+</code></pre></li>
+</ul>
+</li>
+<li><p>Gerrit用戶認證</p>
+<ul>
+<li>使用建立的Gerrit用戶帳號與密碼,登入Web,</li>
+<li>第一個登入的帳號為Administrator,</li>
+<li>進入setting填入Email認證,</li>
+<li>並加入Public SSH Key</li>
+</ul>
+</li>
+<li><p>Gerrit增加Label-Verified</p>
+<pre><code>mkdir tmp
+cd tmp
+git init
+git remote add origin ssh://admin@remote.site.com:29418/All-Projects
+git fetch origin refs/meta/config:refs/remotes/origin/meta/config
+git checkout meta/config
+vim project.config
+</code></pre> <!-- -->
+<pre><code>[label &quot;Verified&quot;]
+        function = MaxWithBlock
+        value = -1 Fails
+        value = 0 No score
+        value = +1 Verified
+</code></pre> <!-- -->
+<pre><code>git add *
+git config --global user.name &quot;Neil Lee&quot;
+git config --global user.email xunyi.lee@gmail.com
+git commit -m &quot;Add label&apos;verfied&apos;&quot;
+git push origin meta/config
+</code></pre></li>
+</ol>
+<ol>
+<li><p>設定Gerrit Web中使用中文註解</p>
+<ul>
+<li><p>設定Gerrit MySQL Server連線設定</p>
+<pre><code>vim /home/gerrit/review_site/etc/gerrit.config
+</code></pre>  <!-- -->
+<pre><code>[database]
+        type = mysql
+        url = jdbc:mysql://localhost:3306/reviewdb?user=gerrit&amp;useUnicode=true&amp;characterEncoding=utf8
+</code></pre></li>
+<li><p>設定Gerrit database in MySQL Server </p>
+<pre><code>mysql -u gerrit -p
+ALTER DATABASE reviewdb charset=utf8;
+use reviewdb;
+alter table account_diff_preferences engine=innodb;
+alter table account_external_ids engine=innodb;
+alter table account_group_id engine=innodb;
+alter table account_group_includes_by_uuid engine=innodb;
+alter table account_group_includes_by_uuid_audit engine=innodb;
+alter table account_group_members engine=innodb;
+alter table account_group_members_audit engine=innodb;
+alter table account_group_names engine=innodb;
+alter table account_groups engine=innodb;
+alter table account_id engine=innodb;
+alter table account_patch_reviews engine=innodb;
+alter table account_project_watches engine=innodb;
+alter table account_ssh_keys engine=innodb;
+alter table accounts engine=innodb;
+alter table change_id engine=innodb;
+alter table change_message_id engine=innodb;
+alter table change_messages engine=innodb;
+alter table changes engine=innodb;
+alter table patch_comments engine=innodb;
+alter table patch_set_ancestors engine=innodb;
+alter table patch_set_approvals engine=innodb;
+alter table patch_sets engine=innodb;
+alter table schema_version engine=innodb;
+alter table starred_changes engine=innodb;
+alter table submodule_subscriptions engine=innodb;
+alter table system_config engine=innodb;
+alter table tracking_ids engine=innodb;
+ALTER TABLE account_diff_preferences CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE account_external_ids CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE account_group_id CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE account_group_includes_by_uuid CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE account_group_includes_by_uuid_audit CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE account_group_members CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE account_group_members_audit CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE account_group_names CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE account_groups CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE account_id CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE account_patch_reviews CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE account_project_watches CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE account_ssh_keys CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE accounts CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE change_id CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE change_message_id CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE change_messages CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE changes CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE patch_comments CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE patch_set_ancestors CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE patch_set_approvals CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE patch_sets CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE schema_version CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE starred_changes CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE submodule_subscriptions CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE system_config CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+ALTER TABLE tracking_ids CONVERT TO CHARACTER SET utf8 COLLATE utf8_general_ci;
+</code></pre></li>
+</ul>
+</li>
+<li><p>設定Gerrit提供gitweb瀏覽repo</p>
+<ul>
+<li><p>安裝gitweb</p>
+<pre><code>sudo apt-get install gitweb
+</code></pre></li>
+<li><p>設定gitweb</p>
+<pre><code>vim /home/gerrit/review_site/etc/gerrit.config
+</code></pre>  <!-- -->
+<pre><code>[gitweb]
+        cgi = /usr/share/gitweb/index.cgi
+</code></pre></li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/13/Linux-Git-Gitolite-Server-Git-ACL-Server/" rel="next" title="(Linux)(Git) Gitolite Server - Git ACL Server">
+                <i class="fa fa-chevron-left"></i> (Linux)(Git) Gitolite Server - Git ACL Server
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/13/MAC-Apache-MySQL-Server/" rel="prev" title="(MAC) Apache & MySQL Server">
+                (MAC) Apache & MySQL Server <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Neil Lee</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">20</span>
+                  <span class="site-state-item-name">文章</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分類</span>
+                </a>
+              </div>
+            
+
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Neil Lee</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 強力驅動</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主題 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
