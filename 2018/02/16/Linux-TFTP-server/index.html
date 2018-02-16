@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Neil&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/categories/Software-engineering/Issue-tracking/index.html">
+<meta name="description" content="安裝TFTP Server sudo apt-get install xinetd tftpd  Ubuntu下TFTP是不能單獨運作的，需要xinetd這個網路管理的背景程式之支援。 於是我們同時安裝這兩個套件。   設定xinetd.conf  sudo vi /etc/xinetd.conf   # Simple configuration file for xinetd # Some d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(Linux) TFTP server">
+<meta property="og:url" content="http://yoursite.com/2018/02/16/Linux-TFTP-server/index.html">
 <meta property="og:site_name" content="Neil&#39;s Blog">
+<meta property="og:description" content="安裝TFTP Server sudo apt-get install xinetd tftpd  Ubuntu下TFTP是不能單獨運作的，需要xinetd這個網路管理的背景程式之支援。 於是我們同時安裝這兩個套件。   設定xinetd.conf  sudo vi /etc/xinetd.conf   # Simple configuration file for xinetd # Some d">
 <meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2018-02-16T14:37:11.561Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Neil&#39;s Blog">
+<meta name="twitter:title" content="(Linux) TFTP server">
+<meta name="twitter:description" content="安裝TFTP Server sudo apt-get install xinetd tftpd  Ubuntu下TFTP是不能單獨運作的，需要xinetd這個網路管理的背景程式之支援。 於是我們同時安裝這兩個套件。   設定xinetd.conf  sudo vi /etc/xinetd.conf   # Simple configuration file for xinetd # Some d">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/Software-engineering/Issue-tracking/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/16/Linux-TFTP-server/"/>
 
 
 
 
 
-  <title>分類: Issue tracking | Neil's Blog</title>
+  <title>(Linux) TFTP server | Neil's Blog</title>
   
 
 
@@ -140,7 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,55 +238,228 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Issue tracking<small>分類</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Linux-TFTP-server/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Neil Lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/02/16/Linux-Redmine-server-Project-management-Issue-tracking/" itemprop="url">
-              
-                <span itemprop="name">(Linux)Redmine server - Project management & Issue tracking</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">(Linux) TFTP server</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-16T13:36:09+08:00"
-              content="2018-02-16" >
-          02-16
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-16T21:13:06+08:00">
+                2018-02-16
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <ol>
+<li><p>安裝TFTP Server</p>
+<pre><code>sudo apt-get install xinetd tftpd
+</code></pre><ul>
+<li>Ubuntu下TFTP是不能單獨運作的，需要xinetd這個網路管理的背景程式之支援。 於是我們同時安裝這兩個套件。</li>
+</ul>
+</li>
+<li><p>設定xinetd.conf </p>
+<pre><code>sudo vi /etc/xinetd.conf
+</code></pre> <!-- -->
+<pre><code># Simple configuration file for xinetd
+# Some defaults, and include /etc/xinetd.d/
+defaults
+{
+# Please note that you need a log_type line to be able to use log_on_success
+# and log_on_failure. The default is the following :
+# log_type = SYSLOG daemon info
+}
+includedir /etc/xinetd.d
+</code></pre><p> 雖然我們可以將設定內容寫入此處，但還有更好的設定檔設定方法。用下列方法設定</p>
+<pre><code>    sudo vim /etc/xinetd.d/tftp
+&lt;!-- --&gt; 
+    service tftp {
+            socket_type     = dgram
+            protocol        = udp
+            wait            = yes
+            user            = root
+            server          = /usr/sbin/in.tftpd
+            server_args     = -s /home/tftpboot
+            disable         = no
+            per_source      = 11
+            cps             = 100 2
+            flags           = IPv4
+    }
+</code></pre></li>
+<li><p>重新讓xinetd讀入參數並重新啟動。</p>
+<pre><code>sudo /etc/init.d/xinetd reload
+sudo /etc/init.d/xinetd restart
+</code></pre></li>
+<li><p>檢查TFTP是否真的在運作</p>
+<pre><code>ls -l /tftpboot/
+</code></pre> <!-- -->
+<pre><code>total 0
+-rwxrwxrwx 1 davids davids 0 2006-03-27 23:04 hda.txt
+</code></pre> <!-- -->    
+<pre><code>tftp 192.168.1.100
+tftp&gt; put hda.txt
+</code></pre> <!-- --> 
+<pre><code>Sent 722 bytes in 0.0 seconds
+</code></pre> <!-- -->
+<pre><code>tftp&gt; quit
+</code></pre> <!-- -->
+<pre><code>ls -l /tftpboot/
+</code></pre> <!-- -->
+<pre><code>total 4
+-rwxrwxrwx  1 davids davids 707 2006-03-27 23:07 hda.txt
+</code></pre><p> 看到以上訊息，恭喜你，你已經設定成功啦！ 完成設定後將放置於TFTP的檔案移至 /tftpboot 目錄下。(注意tftpboot資料夾檔案的權限)</p>
+<pre><code>sudo mkdir /home/tftpboot
+sudo chmod -R 777 /home/tftpboot
+sudo chown -R nobody /tftpboot
+</code></pre></li>
+</ol>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/16/Linux-網卡設定VLAN-802-1Q/" rel="next" title="(Linux) 網卡設定VLAN(802.1Q)">
+                <i class="fa fa-chevron-left"></i> (Linux) 網卡設定VLAN(802.1Q)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/16/C-C-陣列大小sizeof/" rel="prev" title="(C)(C++)陣列大小sizeof()">
+                (C)(C++)陣列大小sizeof() <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -290,6 +467,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -504,6 +685,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

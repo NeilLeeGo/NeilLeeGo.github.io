@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Neil&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/tags/Embeded-system/index.html">
+<meta name="description" content="安裝VLAN(802.1Q) apt-get install vlan  Load the 8021q kernel module sudo modprobe 8021q  Ensure that this module gets loaded after a reboot by adding to /etc/modules: sudo  sh -c &amp;apos;grep -q 8021q /e">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(Linux) 網卡設定VLAN(802.1Q)">
+<meta property="og:url" content="http://yoursite.com/2018/02/16/Linux-網卡設定VLAN-802-1Q/index.html">
 <meta property="og:site_name" content="Neil&#39;s Blog">
+<meta property="og:description" content="安裝VLAN(802.1Q) apt-get install vlan  Load the 8021q kernel module sudo modprobe 8021q  Ensure that this module gets loaded after a reboot by adding to /etc/modules: sudo  sh -c &amp;apos;grep -q 8021q /e">
 <meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2018-02-16T14:38:20.980Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Neil&#39;s Blog">
+<meta name="twitter:title" content="(Linux) 網卡設定VLAN(802.1Q)">
+<meta name="twitter:description" content="安裝VLAN(802.1Q) apt-get install vlan  Load the 8021q kernel module sudo modprobe 8021q  Ensure that this module gets loaded after a reboot by adding to /etc/modules: sudo  sh -c &amp;apos;grep -q 8021q /e">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/Embeded-system/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/16/Linux-網卡設定VLAN-802-1Q/"/>
 
 
 
 
 
-  <title>標籤: Embeded system | Neil's Blog</title>
+  <title>(Linux) 網卡設定VLAN(802.1Q) | Neil's Blog</title>
   
 
 
@@ -140,7 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,54 +238,198 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Embeded system<small>標籤</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Linux-網卡設定VLAN-802-1Q/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Neil Lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/02/16/Embeded-System-I2C-Inter-Integrated-Circuit-Bus/" itemprop="url">
-              
-                <span itemprop="name">(Embeded system) I2C, Inter-Integrated Circuit Bus</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">(Linux) 網卡設定VLAN(802.1Q)</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-16T13:44:32+08:00"
-              content="2018-02-16" >
-          02-16
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-16T21:09:25+08:00">
+                2018-02-16
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <ol>
+<li><p>安裝VLAN(802.1Q)</p>
+<pre><code>apt-get install vlan
+</code></pre></li>
+<li><p>Load the 8021q kernel module</p>
+<pre><code>sudo modprobe 8021q
+</code></pre></li>
+<li><p>Ensure that this module gets loaded after a reboot by adding to /etc/modules:</p>
+<pre><code>sudo  sh -c &apos;grep -q 8021q /etc/modules || echo 8021q &gt;&gt; /etc/modules&apos;
+</code></pre></li>
+<li><p>替網卡加入VLAN</p>
+<pre><code>sudo vconfig add eth0 100
+sudo vconfig add &lt;Ether Card&gt; &lt;VID&gt;
+sudo vconfig delete &lt;Ether Card&gt; &lt;VID&gt;
+</code></pre></li>
+<li><p>設定每個網卡對應VLAN的IP, netmask</p>
+<pre><code>sudo ifconfig eth0.100 192.168.100.1 netmask 255.255.255.0
+sudo ifconfig eth0.&lt;VID&gt; &lt;IP&gt; netmask 255.255.255.0
+</code></pre></li>
+</ol>
+<ol>
+<li><p>測試VLAN是否作用,Ping 192.168.100.1/24,使用wireshark錄eth0封包</p>
+</li>
+<li><p>永久設定每個網卡對應VLAN的IP, netmask</p>
+<pre><code>sudo vim /etc/network/interfaces
+</code></pre> <!-- -->
+<pre><code>auto eth0.100
+iface eth0.100 inet static
+address 192.168.100.1
+netmask 255.255.255.0
+</code></pre></li>
+</ol>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/16/Embeded-System-SPI-Serial-peripheral-interface-bus/" rel="next" title="(Embeded system) SPI, Serial peripheral interface bus">
+                <i class="fa fa-chevron-left"></i> (Embeded system) SPI, Serial peripheral interface bus
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/16/Linux-TFTP-server/" rel="prev" title="(Linux) TFTP server">
+                (Linux) TFTP server <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -289,6 +437,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -325,7 +477,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -347,7 +499,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">標籤</span>
                 
               </div>
@@ -503,6 +655,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

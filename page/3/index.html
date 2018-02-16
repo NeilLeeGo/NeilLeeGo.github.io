@@ -249,6 +249,744 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Linux-Embeded-system-C-C-Remote-debug-by-GDB-server/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Neil Lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/16/Linux-Embeded-system-C-C-Remote-debug-by-GDB-server/" itemprop="url">(Linux)(Embeded system)(C)(C++)Remote debug by GDB server</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-16T13:35:51+08:00">
+                2018-02-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">Programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming-language/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming-language/C/" itemprop="url" rel="index">
+                    <span itemprop="name">C++</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Embeded-system/" itemprop="url" rel="index">
+                    <span itemprop="name">Embeded system</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>設定環境</strong></p>
+<ul>
+<li><p>Host (PC)(Ubuntu)</p>
+<ul>
+<li>安裝Cross-Compile GDB &amp; GDB Server<ul>
+<li>下載GDB Source (內含GDB &amp; GDB Server)<br><a href="http://www.gnu.org/software/gdb/download/" target="_blank" rel="noopener">http://www.gnu.org/software/gdb/download/</a></li>
+</ul>
+</li>
+<li><p>Complier GDB</p>
+<pre><code>cd &lt;GDB source&gt;
+./configure
+make
+</code></pre></li>
+<li><p>Cross-compiler GDB Server</p>
+<pre><code>cd &lt;GDB Src&gt;/gdbserver
+./configure --host=mipsel-linux
+make
+</code></pre></li>
+<li><p>安裝CGDB方便操作GDB</p>
+<pre><code>sudo apt-get install cgdb
+</code></pre></li>
+<li><p>Cross-compile <application> with GCC Debug option “-g”</application></p>
+</li>
+</ul>
+</li>
+<li><p>Target board</p>
+<ul>
+<li>將<cross-compiled gdbsever="">放在target board</cross-compiled></li>
+<li>將<cross-compiled application="">放在target board  </cross-compiled></li>
+</ul>
+</li>
+</ul>
+<p><strong>進行Remote debug</strong></p>
+<ul>
+<li><p>Target board</p>
+<ul>
+<li><p>GDB Server 設定Listen Port</p>
+<pre><code>&lt;cross-compiled gdbserver&gt; localhost:&lt;port&gt; &lt;cross-compiled  application&gt;
+</code></pre></li>
+</ul>
+</li>
+<li><p>Host</p>
+<ul>
+<li><p>使用CGDB啟動GDB</p>
+<pre><code>cgdb -d &lt;cross-compiled gdb&gt; &lt;cross-compiled application&gt;
+</code></pre></li>
+<li><p>切換至GDB模式</p>
+<ul>
+<li>CGDB與GDB模式互換<ul>
+<li>GDB-&gt;CGDB: 按下”esc”</li>
+<li>CGDB-&gt;GDB: 按下”i”</li>
+</ul>
+</li>
+<li><p>GCC Debug command連上GDB Server</p>
+<pre><code>target remote &lt;target board IP&gt;:&lt;target board port&gt;
+</code></pre></li>
+</ul>
+</li>
+<li>GCC Debug command<ul>
+<li>list (l) –顯示程式</li>
+<li>continue (c) – 離開中斷點，繼續執行程式</li>
+<li>run (r) – 開始執行程式</li>
+<li>next (n) – Step over</li>
+<li>next (s) – Step in</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Linux-DHCP-server-client-on-different-VLAN/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Neil Lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/16/Linux-DHCP-server-client-on-different-VLAN/" itemprop="url">(Linux) DHCP server/ client on different VLAN</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-16T13:35:47+08:00">
+                2018-02-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>1. Install DHCP Server</strong>  </p>
+<pre><code>sudo apt-get install dhcp3-server
+</code></pre><p><strong>2. Configure DHCP Server</strong></p>
+<pre><code>sudo vim /etc/dhcp3/dhcpd.confAdd following:
+</code></pre><p>Add following</p>
+<pre><code>subnet 192.168.1.0 netmask 255.255.255.0 {
+    range 192.168.1.1 192.168.1.200;
+    option routers 192.168.1.254;
+}
+subnet 192.168.2.0 netmask 255.255.255.0 {
+    range 192.168.2.1 192.168.2.200;
+    option routers 192.168.2.254;
+}
+</code></pre><p><strong>3. Add VLAN to ethernet card (VLAN 10 : eth0.10 ; VLAN 11 : eth0.11)</strong></p>
+<p><strong>4. Use Ifconfig to set eth0.10, eth0.11 to different network segment</strong>  </p>
+<pre><code>sudo ifconfig eth0.10 192.168.1.1 netmask 255.255.255.0
+sudo ifconfig eth0.11 192.168.2.1 netmask 255.255.255.0
+</code></pre><p><strong>5. Enable/ Disable DHCP Server</strong></p>
+<pre><code>sudo /etc/init.d/dhcp3-server start
+sudo /etc/init.d/dhcp3-server stop
+sudo /etc/init.d/dhcp3-server restart
+</code></pre><p><strong>6. Test by DHCP Clients</strong></p>
+<pre><code>dhclient eth0.10
+dhclient eth0.11
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Linux-Bash-開始Bash-script/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Neil Lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/16/Linux-Bash-開始Bash-script/" itemprop="url">(Linux)(Bash)開始Bash script</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-16T13:35:41+08:00">
+                2018-02-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming-language/" itemprop="url" rel="index">
+                    <span itemprop="name">Programming language</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming-language/Bash/" itemprop="url" rel="index">
+                    <span itemprop="name">Bash</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>Bash script</strong></p>
+<ul>
+<li>Linux console mode, 可使用shell script, 進行程式化的指令輸出  </li>
+</ul>
+<p><strong>使用文字編輯器直接編輯.sh</strong><br>vim a.sh</p>
+<p><strong>建立與執行Bash script</strong></p>
+<pre><code>chmod 777 a.sh
+    ./a.sh
+</code></pre><p> 或者    </p>
+<pre><code>bash a.sh
+bash -x a.sh #Debug command
+</code></pre><p><strong>好用的Linux bash shell scipt手冊</strong></p>
+<ul>
+<li><a href="http://www.freeos.com/guides/lsst/" target="_blank" rel="noopener">http://www.freeos.com/guides/lsst/</a></li>
+<li><a href="http://bash.cyberciti.biz/guide/Main_Page" target="_blank" rel="noopener">http://bash.cyberciti.biz/guide/Main_Page</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Linux-Bash-Communcating-to-telnet-or-serial-port/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Neil Lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/16/Linux-Bash-Communcating-to-telnet-or-serial-port/" itemprop="url">(Linux) (Bash) Communcating to telnet or serial port</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-16T13:35:04+08:00">
+                2018-02-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>[Telnet]</strong></p>
+<ul>
+<li><p>寫入command至telnet 終端:</p>
+<pre><code>(echo &quot;command&quot;) | telnet 192.168.1.1
+</code></pre></li>
+</ul>
+<p><strong>[Serial port]</strong> </p>
+<ul>
+<li><p>使用stty設定serial port</p>
+<pre><code>stty -F /dev/ttyS0 speed 9600 -icrnl
+stty -F &lt;dev&gt; speed  &lt;baudrate&gt; -icrnl
+</code></pre><p>  *-crnl: translate carriage return to a newline </p>
+</li>
+<li><p>寫入 command至serial port:</p>
+<pre><code>(echo &quot;command&quot;) | &gt; /dev/ttyS0
+</code></pre></li>
+<li><p>讀取serial port上回傳值:</p>
+<pre><code>cat /dev/ttyS0
+read /dev/ttyS0 &gt; /dev/tty
+</code></pre></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Embeded-System-Microchip-Hint-for-HITECH-C-Compilier/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -530,7 +1268,7 @@ BSF EECON1, WR
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">25</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
@@ -552,7 +1290,7 @@ BSF EECON1, WR
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">標籤</span>
                 
               </div>
