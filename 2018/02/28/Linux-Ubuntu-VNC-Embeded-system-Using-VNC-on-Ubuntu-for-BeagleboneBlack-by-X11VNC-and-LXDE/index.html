@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Debian/ Ubuntu的套件管理工具有apt-getRedHat/ Suse的套件管理工具有yum相對應的MAC的套件管理工具則有MacPorts  安裝方法  可以根據MAC OS版本(Sierra, El Capitan, Yosemite,…)直接下載.pkg檔案 https://www.macports.org/install.php   執行.pkg 檔案，按照步驟提示完成安裝，就">
+<meta name="description" content="前言  希望在Beaglebone black(BBB)上做一些開發,又能達成 Ubuntu系統    VNC遠端桌面操作 輕量級的桌面系統(Window manager) -&amp;gt; 改善效能 桌面被Render到Host(BBB)的Display -&amp;gt; 改善效能   因此使用下列的安裝方式  安裝Ubuntu server,不要有桌面環境 安裝X11VNC (VNC server) su">
 <meta property="og:type" content="article">
-<meta property="og:title" content="(MAC) MacPorts">
-<meta property="og:url" content="http://yoursite.com/2018/02/16/MAC-MacPorts/index.html">
+<meta property="og:title" content="(Linux)(Ubuntu)(VNC)(Embeded system)Using VNC on Ubuntu for BeagleboneBlack by X11VNC and LXDE">
+<meta property="og:url" content="http://yoursite.com/2018/02/28/Linux-Ubuntu-VNC-Embeded-system-Using-VNC-on-Ubuntu-for-BeagleboneBlack-by-X11VNC-and-LXDE/index.html">
 <meta property="og:site_name" content="Neil&#39;s Blog">
-<meta property="og:description" content="Debian/ Ubuntu的套件管理工具有apt-getRedHat/ Suse的套件管理工具有yum相對應的MAC的套件管理工具則有MacPorts  安裝方法  可以根據MAC OS版本(Sierra, El Capitan, Yosemite,…)直接下載.pkg檔案 https://www.macports.org/install.php   執行.pkg 檔案，按照步驟提示完成安裝，就">
+<meta property="og:description" content="前言  希望在Beaglebone black(BBB)上做一些開發,又能達成 Ubuntu系統    VNC遠端桌面操作 輕量級的桌面系統(Window manager) -&amp;gt; 改善效能 桌面被Render到Host(BBB)的Display -&amp;gt; 改善效能   因此使用下列的安裝方式  安裝Ubuntu server,不要有桌面環境 安裝X11VNC (VNC server) su">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2018-02-28T09:53:13.884Z">
+<meta property="og:updated_time" content="2018-02-28T13:52:17.630Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="(MAC) MacPorts">
-<meta name="twitter:description" content="Debian/ Ubuntu的套件管理工具有apt-getRedHat/ Suse的套件管理工具有yum相對應的MAC的套件管理工具則有MacPorts  安裝方法  可以根據MAC OS版本(Sierra, El Capitan, Yosemite,…)直接下載.pkg檔案 https://www.macports.org/install.php   執行.pkg 檔案，按照步驟提示完成安裝，就">
+<meta name="twitter:title" content="(Linux)(Ubuntu)(VNC)(Embeded system)Using VNC on Ubuntu for BeagleboneBlack by X11VNC and LXDE">
+<meta name="twitter:description" content="前言  希望在Beaglebone black(BBB)上做一些開發,又能達成 Ubuntu系統    VNC遠端桌面操作 輕量級的桌面系統(Window manager) -&amp;gt; 改善效能 桌面被Render到Host(BBB)的Display -&amp;gt; 改善效能   因此使用下列的安裝方式  安裝Ubuntu server,不要有桌面環境 安裝X11VNC (VNC server) su">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/02/16/MAC-MacPorts/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/28/Linux-Ubuntu-VNC-Embeded-system-Using-VNC-on-Ubuntu-for-BeagleboneBlack-by-X11VNC-and-LXDE/"/>
 
 
 
 
 
-  <title>(MAC) MacPorts | Neil's Blog</title>
+  <title>(Linux)(Ubuntu)(VNC)(Embeded system)Using VNC on Ubuntu for BeagleboneBlack by X11VNC and LXDE | Neil's Blog</title>
   
 
 
@@ -261,7 +261,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/MAC-MacPorts/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/28/Linux-Ubuntu-VNC-Embeded-system-Using-VNC-on-Ubuntu-for-BeagleboneBlack-by-X11VNC-and-LXDE/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Neil Lee">
@@ -278,7 +278,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">(MAC) MacPorts</h2>
+          <h2 class="post-title" itemprop="name headline">(Linux)(Ubuntu)(VNC)(Embeded system)Using VNC on Ubuntu for BeagleboneBlack by X11VNC and LXDE</h2>
         
 
         <div class="post-meta">
@@ -290,8 +290,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-16T13:36:57+08:00">
-                2018-02-16
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-28T20:30:26+08:00">
+                2018-02-28
               </time>
             
 
@@ -313,8 +313,30 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MAC/" itemprop="url" rel="index">
-                    <span itemprop="name">MAC</span>
+                  <a href="/categories/Embeded-system/" itemprop="url" rel="index">
+                    <span itemprop="name">Embeded system</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/Ubuntu/" itemprop="url" rel="index">
+                    <span itemprop="name">Ubuntu</span>
                   </a>
                 </span>
 
@@ -350,32 +372,42 @@
       
 
       
-        <p>Debian/ Ubuntu的套件管理工具有apt-get<br>RedHat/ Suse的套件管理工具有yum<br>相對應的MAC的套件管理工具則有MacPorts</p>
+        <p><strong>前言</strong></p>
 <ul>
-<li><p><strong>安裝方法</strong></p>
-<ul>
-<li>可以根據MAC OS版本(Sierra, El Capitan, Yosemite,…)直接下載.pkg檔案</li>
-<li><a href="https://www.macports.org/install.php" target="_blank" rel="noopener">https://www.macports.org/install.php</a>  </li>
-<li>執行.pkg 檔案，按照步驟提示完成安裝，就可以完成 MacPorts 的基礎安裝</li>
+<li>希望在Beaglebone black(BBB)上做一些開發,又能達成<ul>
+<li>Ubuntu系統   </li>
+<li>VNC遠端桌面操作</li>
+<li>輕量級的桌面系統(Window manager) -&gt; 改善效能</li>
+<li>桌面被Render到Host(BBB)的Display -&gt; 改善效能<!-- --></li>
 </ul>
 </li>
-<li><p><strong>使用方法</strong></p>
-<ul>
-<li>安裝後系統提供一個port命令列指令。</li>
-<li><p>打開終端機程式，先進行軟體清單更新。</p>
-<pre><code>sudo port -d selfupdate
+<li><p>因此使用下列的安裝方式</p>
+<ol>
+<li>安裝Ubuntu server,不要有桌面環境</li>
+<li><p>安裝X11VNC (VNC server)</p>
+<pre><code>sudo apt-get install x11vnc
 </code></pre></li>
-<li><p>列出所有軟體使用：</p>
-<pre><code>port list
-</code></pre></li>
-<li><p>搜尋某個軟體：</p>
-<pre><code>port search &lt;name&gt; 
-</code></pre></li>
-<li><p>安裝個軟體，則使用：</p>
-<pre><code>port install &lt;name&gt;
-</code></pre></li>
+<li>安裝XVFB(X virtual framebuffer)<ul>
+<li>A display server implementing the X11 display server protocol</li>
+<li><a href="https://en.wikipedia.org/wiki/Xvfb" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Xvfb</a><!-- -->
+  sudo apt-get install xvfb</li>
 </ul>
 </li>
+<li><p>安裝LXDE (Lubuntu的Window manager)</p>
+<pre><code>sudo apt-get install lxde
+</code></pre></li>
+<li><p>啟動XVFB</p>
+<pre><code>export DISPLAY=:1
+Xvfb :1 -screen 0 1024x768x16 &amp;
+startlxde &amp;
+x11vnc -display :1 -bg -nopw -listen local_IP -xkb
+</code></pre></li>
+</ol>
+</li>
+</ul>
+<p><strong>延伸閱讀</strong></p>
+<ul>
+<li>X Window介紹 <a href="http://linux.vbird.org/linux_basic/0590xwindow.php" target="_blank" rel="noopener">http://linux.vbird.org/linux_basic/0590xwindow.php</a></li>
 </ul>
 
       
@@ -401,8 +433,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/16/MAC-Git-Gerrit-Server/" rel="next" title="(MAC)(Git) Gerrit Server">
-                <i class="fa fa-chevron-left"></i> (MAC)(Git) Gerrit Server
+              <a href="/2018/02/16/C-C-陣列大小sizeof/" rel="next" title="(C)(C++)陣列大小sizeof()">
+                <i class="fa fa-chevron-left"></i> (C)(C++)陣列大小sizeof()
               </a>
             
           </div>
@@ -410,10 +442,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/16/Gitolite-Server-on-MAC/" rel="prev" title="Gitolite Server on MAC">
-                Gitolite Server on MAC <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>

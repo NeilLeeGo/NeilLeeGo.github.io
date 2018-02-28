@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Neil Lee, Embeded system, Network protocol" />
+  <meta name="keywords" content="Neil Lee, Embeded system, Network protocol, Linux" />
 
 
 
@@ -166,7 +166,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle"></p>
+        <h1 class="site-subtitle" itemprop="description"></h1>
       
   </div>
 
@@ -258,6 +258,206 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/28/Linux-Ubuntu-VNC-Embeded-system-Using-VNC-on-Ubuntu-for-BeagleboneBlack-by-X11VNC-and-LXDE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Neil Lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/28/Linux-Ubuntu-VNC-Embeded-system-Using-VNC-on-Ubuntu-for-BeagleboneBlack-by-X11VNC-and-LXDE/" itemprop="url">(Linux)(Ubuntu)(VNC)(Embeded system)Using VNC on Ubuntu for BeagleboneBlack by X11VNC and LXDE</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-28T20:30:26+08:00">
+                2018-02-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Embeded-system/" itemprop="url" rel="index">
+                    <span itemprop="name">Embeded system</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/Ubuntu/" itemprop="url" rel="index">
+                    <span itemprop="name">Ubuntu</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>前言</strong></p>
+<ul>
+<li>希望在Beaglebone black(BBB)上做一些開發,又能達成<ul>
+<li>Ubuntu系統   </li>
+<li>VNC遠端桌面操作</li>
+<li>輕量級的桌面系統(Window manager) -&gt; 改善效能</li>
+<li>桌面被Render到Host(BBB)的Display -&gt; 改善效能<!-- --></li>
+</ul>
+</li>
+<li><p>因此使用下列的安裝方式</p>
+<ol>
+<li>安裝Ubuntu server,不要有桌面環境</li>
+<li><p>安裝X11VNC (VNC server)</p>
+<pre><code>sudo apt-get install x11vnc
+</code></pre></li>
+<li>安裝XVFB(X virtual framebuffer)<ul>
+<li>A display server implementing the X11 display server protocol</li>
+<li><a href="https://en.wikipedia.org/wiki/Xvfb" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Xvfb</a><!-- -->
+  sudo apt-get install xvfb</li>
+</ul>
+</li>
+<li><p>安裝LXDE (Lubuntu的Window manager)</p>
+<pre><code>sudo apt-get install lxde
+</code></pre></li>
+<li><p>啟動XVFB</p>
+<pre><code>export DISPLAY=:1
+Xvfb :1 -screen 0 1024x768x16 &amp;
+startlxde &amp;
+x11vnc -display :1 -bg -nopw -listen local_IP -xkb
+</code></pre></li>
+</ol>
+</li>
+</ul>
+<p><strong>延伸閱讀</strong></p>
+<ul>
+<li>X Window介紹 <a href="http://linux.vbird.org/linux_basic/0590xwindow.php" target="_blank" rel="noopener">http://linux.vbird.org/linux_basic/0590xwindow.php</a></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/C-C-陣列大小sizeof/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -275,9 +475,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/16/C-C-陣列大小sizeof/" itemprop="url">(C)(C++)陣列大小sizeof()</a></h1>
+                <a class="post-title-link" href="/2018/02/16/C-C-陣列大小sizeof/" itemprop="url">(C)(C++)陣列大小sizeof()</a></h2>
         
 
         <div class="post-meta">
@@ -526,9 +726,9 @@ void function (int intArray[], int length)
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/16/Linux-TFTP-server/" itemprop="url">(Linux) TFTP server</a></h1>
+                <a class="post-title-link" href="/2018/02/16/Linux-TFTP-server/" itemprop="url">(Linux) TFTP server</a></h2>
         
 
         <div class="post-meta">
@@ -729,9 +929,9 @@ sudo chown -R nobody /tftpboot
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/16/Linux-網卡設定VLAN-802-1Q/" itemprop="url">(Linux) 網卡設定VLAN(802.1Q)</a></h1>
+                <a class="post-title-link" href="/2018/02/16/Linux-網卡設定VLAN-802-1Q/" itemprop="url">(Linux) 網卡設定VLAN(802.1Q)</a></h2>
         
 
         <div class="post-meta">
@@ -902,9 +1102,9 @@ netmask 255.255.255.0
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/16/Embeded-System-SPI-Serial-peripheral-interface-bus/" itemprop="url">(Embeded system) SPI, Serial peripheral interface bus</a></h1>
+                <a class="post-title-link" href="/2018/02/16/Embeded-System-SPI-Serial-peripheral-interface-bus/" itemprop="url">(Embeded system) SPI, Serial peripheral interface bus</a></h2>
         
 
         <div class="post-meta">
@@ -1078,7 +1278,7 @@ netmask 255.255.255.0
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/15/Embeded-System-I2C-Inter-Integrated-Circuit-Bus/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Embeded-System-I2C-Inter-Integrated-Circuit-Bus/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Neil Lee">
@@ -1095,9 +1295,9 @@ netmask 255.255.255.0
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/15/Embeded-System-I2C-Inter-Integrated-Circuit-Bus/" itemprop="url">(Embeded system) I2C, Inter-Integrated Circuit Bus</a></h1>
+                <a class="post-title-link" href="/2018/02/16/Embeded-System-I2C-Inter-Integrated-Circuit-Bus/" itemprop="url">(Embeded system) I2C, Inter-Integrated Circuit Bus</a></h2>
         
 
         <div class="post-meta">
@@ -1286,7 +1486,7 @@ netmask 255.255.255.0
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/15/Gitolite-Server-on-MAC/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Gitolite-Server-on-MAC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Neil Lee">
@@ -1303,9 +1503,9 @@ netmask 255.255.255.0
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/15/Gitolite-Server-on-MAC/" itemprop="url">Gitolite Server on MAC</a></h1>
+                <a class="post-title-link" href="/2018/02/16/Gitolite-Server-on-MAC/" itemprop="url">Gitolite Server on MAC</a></h2>
         
 
         <div class="post-meta">
@@ -1362,8 +1562,8 @@ netmask 255.255.255.0
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MAC/" itemprop="url" rel="index">
-                    <span itemprop="name">MAC</span>
+                  <a href="/categories/Software-engineering/Revision-control/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
                   </a>
                 </span>
 
@@ -1373,8 +1573,8 @@ netmask 255.255.255.0
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Software-engineering/Revision-control/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
+                  <a href="/categories/MAC/" itemprop="url" rel="index">
+                    <span itemprop="name">MAC</span>
                   </a>
                 </span>
 
@@ -1478,7 +1678,7 @@ gitolite/install -to -ln /usr/local/bin
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/15/MAC-MacPorts/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/MAC-MacPorts/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Neil Lee">
@@ -1495,9 +1695,9 @@ gitolite/install -to -ln /usr/local/bin
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/15/MAC-MacPorts/" itemprop="url">(MAC) MacPorts</a></h1>
+                <a class="post-title-link" href="/2018/02/16/MAC-MacPorts/" itemprop="url">(MAC) MacPorts</a></h2>
         
 
         <div class="post-meta">
@@ -1646,7 +1846,7 @@ gitolite/install -to -ln /usr/local/bin
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/15/MAC-Git-Gerrit-Server/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/MAC-Git-Gerrit-Server/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Neil Lee">
@@ -1663,9 +1863,9 @@ gitolite/install -to -ln /usr/local/bin
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/15/MAC-Git-Gerrit-Server/" itemprop="url">(MAC)(Git) Gerrit Server</a></h1>
+                <a class="post-title-link" href="/2018/02/16/MAC-Git-Gerrit-Server/" itemprop="url">(MAC)(Git) Gerrit Server</a></h2>
         
 
         <div class="post-meta">
@@ -1937,7 +2137,7 @@ pbcopy &lt; ~/.ssh/id_rsa.pub
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/15/Gitweb-Server-on-MAC/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Gitweb-Server-on-MAC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Neil Lee">
@@ -1954,9 +2154,9 @@ pbcopy &lt; ~/.ssh/id_rsa.pub
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/02/15/Gitweb-Server-on-MAC/" itemprop="url">Gitweb Server on MAC</a></h1>
+                <a class="post-title-link" href="/2018/02/16/Gitweb-Server-on-MAC/" itemprop="url">Gitweb Server on MAC</a></h2>
         
 
         <div class="post-meta">
@@ -2013,8 +2213,8 @@ pbcopy &lt; ~/.ssh/id_rsa.pub
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MAC/" itemprop="url" rel="index">
-                    <span itemprop="name">MAC</span>
+                  <a href="/categories/Software-engineering/Revision-control/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
                   </a>
                 </span>
 
@@ -2024,8 +2224,8 @@ pbcopy &lt; ~/.ssh/id_rsa.pub
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Software-engineering/Revision-control/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
+                  <a href="/categories/MAC/" itemprop="url" rel="index">
+                    <span itemprop="name">MAC</span>
                   </a>
                 </span>
 
@@ -2135,182 +2335,6 @@ sudo make gitwebdir=/var/www/gitweb install-gitweb
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/15/MAC-Apache-MySQL-Server/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Neil Lee">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Neil's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/15/MAC-Apache-MySQL-Server/" itemprop="url">(MAC) Apache & MySQL Server</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-16T13:36:40+08:00">
-                2018-02-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MAC/" itemprop="url" rel="index">
-                    <span itemprop="name">MAC</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><p><strong>架站工具</strong></p>
-<ul>
-<li>WinAppServ 2.5.9<ul>
-<li>Apache 2.2.4 ,PHP 5.2.3 ,MySQL* 5.0.45 ,phpMyAdmin-2.10.2</li>
-</ul>
-</li>
-<li>Linux(ubuntu)<ul>
-<li>Xampp </li>
-</ul>
-</li>
-<li><p>Mac OSX(ubuntu)Mamp：</p>
-<pre><code>1. 安裝完成後，進入Finder/應用程式/MAMP/，啟動MAMP。  
-(/MAMP/資料夾有停供Widget可使用)
-2. 打開MAMP，可看到star server、open start page、preference
-    * start server：可啟動apache web server和mysql server。
-    * open start page：打開mamp設定狀態的網頁，也可從中連到mysql的web設定頁phpmyadmin。
-    * preference：內容有start/stop，ports，php，apache：四個標籤頁
-       - preference設定說明
-            + start/stop：start url用來設定先前open start page的位置，原則上不動預設為(/mamp/)
-            + ports：apache port改為80。
-            + php：看個人需求設定。
-
-    * apache：document root用來設定web起始頁所在資料夾，為：/Users/Shiunyi/Sites
-
-3. 打開finder，個人資料夾(ex:Shiunyi)，裡面有資料夾-桌面、音樂、網站...,將其中&quot;網站&quot;資料夾拖到finder側邊欄，以後將編輯的網頁(ex:index.htm)放入其中，以後啟動apache web server後，即可從safari的url link:http://localhost/index.htm連到網頁。
-4. Web Homepage Address:
-    - http://127.0.0.1/
-    - http://localhost/
-    - Web phpmyadmin:
-5. http://127.0.0.1/phpmyadmin/
-</code></pre></li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2361,7 +2385,7 @@ sudo make gitwebdir=/var/www/gitweb install-gitweb
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
