@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="環境Ubuntu 20.04 (64 Bits)安裝 執行下列指令123456789sudo apt-get remove docker docker-engine docker.io containerd runcsudo apt-get updatesudo apt-get install ca-certificates curl gnupg lsb-releasecurl -fsSL htt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(Linux)(Ubuntu) Docker">
+<meta property="og:url" content="http://yoursite.com/2022/03/29/Linux-Ubuntu-Docker/index.html">
+<meta property="og:site_name" content="Neil&#39;s Blog">
+<meta property="og:description" content="環境Ubuntu 20.04 (64 Bits)安裝 執行下列指令123456789sudo apt-get remove docker docker-engine docker.io containerd runcsudo apt-get updatesudo apt-get install ca-certificates curl gnupg lsb-releasecurl -fsSL htt">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2022-03-29T06:49:18.000Z">
+<meta property="article:modified_time" content="2022-10-17T13:43:56.158Z">
+<meta property="article:author" content="Neil Lee">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2022/03/29/Linux-Ubuntu-Docker/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-tw'
+  };
+</script>
+
+  <title>(Linux)(Ubuntu) Docker | Neil's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Neil's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/03/29/Linux-Ubuntu-Docker/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Neil Lee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          (Linux)(Ubuntu) Docker
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-03-29 14:49:18" itemprop="dateCreated datePublished" datetime="2022-03-29T14:49:18+08:00">2022-03-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-10-17 21:43:56" itemprop="dateModified" datetime="2022-10-17T21:43:56+08:00">2022-10-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/Ubuntu/" itemprop="url" rel="index"><span itemprop="name">Ubuntu</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h1><h2 id="Ubuntu-20-04-64-Bits"><a href="#Ubuntu-20-04-64-Bits" class="headerlink" title="Ubuntu 20.04 (64 Bits)"></a>Ubuntu 20.04 (64 Bits)</h2><h1 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h1><ul>
+<li>執行下列指令<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove docker docker-engine docker.io containerd runc</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install ca-certificates curl gnupg lsb-release</span><br><span class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg</span><br><span class="line">echo \</span><br><span class="line">&quot;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \</span><br><span class="line">$(lsb_release -cs) stable&quot; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><h2 id="Image操作"><a href="#Image操作" class="headerlink" title="Image操作"></a>Image操作</h2><ul>
+<li><p>安裝 (範例:ubuntu image)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker search ubuntu -f is-official=true</span><br><span class="line">docker pull ubuntu</span><br></pre></td></tr></table></figure></li>
+<li><p>移除</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  docker rmi &lt;Image name/Image ID&gt;</span><br><span class="line">* 操作內容</span><br></pre></td></tr></table></figure>
+<p>docker run -it ubuntu &#x2F;bin&#x2F;bash </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 自訂Image</span><br><span class="line">  * By Interaction</span><br><span class="line">    1. 操作內容</span><br></pre></td></tr></table></figure>
+<pre><code>  docker run -it ubuntu /bin/bash 
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">2. 手動安裝環境</span><br><span class="line">3. 暫時離開container</span><br><span class="line">    </span><br><span class="line">    ctrl+p, ctrl+q</span><br><span class="line"></span><br><span class="line">4. 查詢container名稱</span><br></pre></td></tr></table></figure>
+  docker container ls -a
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5. 建立Image</span><br></pre></td></tr></table></figure>
+  docker commit -m &lt;message&gt; -a &lt;author&gt; &lt;container ID&gt; &lt;tag&gt; 
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* Dockerfile方法</span><br><span class="line">  1. 編寫Dockerfile (範例: Hexo)</span><br></pre></td></tr></table></figure>
+  FROM ubuntu
+  MAINTAINER Neil
+  ARG DEBIAN_FRONTEND=noninteractive
+  ENV TZ=Asia/Taipei
+  RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime &amp;&amp; echo $TZ &gt; /etc/timezone
+
+  RUN apt-get update
+  RUN apt-get --yes install git
+  RUN apt-get --yes install curl dirmngr apt-transport-https lsb-release ca-certificates
+  RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+  RUN apt-get update
+  RUN apt-get --yes install nodejs 
+
+  RUN npm install hexo-cli -g
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2. 建立Image</span><br></pre></td></tr></table></figure>
+  docker build -t &lt;image name&gt; -f &lt;docker-file&gt; &lt;path&gt;
+</code></pre>
+</li>
+<li><p>Export Image</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker export &lt;.tar&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>Import Image</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker import &lt;.tar&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Container操作"><a href="#Container操作" class="headerlink" title="Container操作"></a>Container操作</h2></li>
+<li><p>列出所有container狀態</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a</span><br><span class="line">docker container ls -a</span><br></pre></td></tr></table></figure></li>
+<li><p>移除所有停止的container</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker container prune</span><br></pre></td></tr></table></figure></li>
+<li><p>Detaching Without Stopping container</p>
+<p>ctrl + p, ctrl + q</p>
+</li>
+<li><p>Reattaching Container</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker attach &lt;container&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>使用root身份登入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -u 0 -it &lt;container ID&gt; /bin/bash</span><br></pre></td></tr></table></figure></li>
+<li><p>Docker volume &amp; network (host)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --net=host -it -v &lt;host path&gt;:/&lt;container path&gt; &lt;image ID&gt; /bin/bash</span><br></pre></td></tr></table></figure>
+<h1 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h1><h2 id="Container中apt-install自動補全"><a href="#Container中apt-install自動補全" class="headerlink" title="Container中apt install自動補全"></a>Container中apt install自動補全</h2><h3 id="安裝bash-completion"><a href="#安裝bash-completion" class="headerlink" title="安裝bash-completion"></a>安裝bash-completion</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install bash-completion</span><br></pre></td></tr></table></figure>
+<h3 id="編輯-x2F-bin-x2F-bash-bashrc"><a href="#編輯-x2F-bin-x2F-bash-bashrc" class="headerlink" title="編輯&#x2F;bin&#x2F;bash.bashrc"></a>編輯&#x2F;bin&#x2F;bash.bashrc</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if ! shopt -oq posix; then</span><br><span class="line"> if [ -f /usr/share/bash-completion/bash_completion ]; then</span><br><span class="line">   . /usr/share/bash-completion/bash_completion</span><br><span class="line"> elif [ -f /etc/bash_completion ]; then</span><br><span class="line">   . /etc/bash_completion</span><br><span class="line"> fi</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<h3 id="移除docker-clean"><a href="#移除docker-clean" class="headerlink" title="移除docker.clean"></a>移除docker.clean</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm /etc/apt/apt.conf.d/docker.clean</span><br><span class="line">apt-get update</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="更改Docker-Image-amp-Container預設安裝位置"><a href="#更改Docker-Image-amp-Container預設安裝位置" class="headerlink" title="更改Docker Image &amp; Container預設安裝位置"></a>更改Docker Image &amp; Container預設安裝位置</h2><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><h4 id="停止docker-daemon"><a href="#停止docker-daemon" class="headerlink" title="停止docker daemon"></a>停止docker daemon</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service docker stop</span><br></pre></td></tr></table></figure>
+<h4 id="編輯-x2F-etc-x2F-docker-x2F-daemon-json-指定新位置"><a href="#編輯-x2F-etc-x2F-docker-x2F-daemon-json-指定新位置" class="headerlink" title="編輯&#x2F;etc&#x2F;docker&#x2F;daemon.json,指定新位置"></a>編輯&#x2F;etc&#x2F;docker&#x2F;daemon.json,指定新位置</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;data-root&quot;: &quot;/path/to/your/docker&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="複製現有docker-images-x2F-containers到新位置"><a href="#複製現有docker-images-x2F-containers到新位置" class="headerlink" title="複製現有docker images&#x2F; containers到新位置"></a>複製現有docker images&#x2F; containers到新位置</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rsync -aP /var/lib/docker/ /path/to/your/docker</span><br></pre></td></tr></table></figure>
+<h4 id="重起docker-daemon"><a href="#重起docker-daemon" class="headerlink" title="重起docker daemon"></a>重起docker daemon</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service docker start</span><br></pre></td></tr></table></figure>
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><h4 id="Stop-docker-daemon"><a href="#Stop-docker-daemon" class="headerlink" title="Stop docker daemon."></a>Stop docker daemon.</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/docker stop</span><br></pre></td></tr></table></figure>
+<h4 id="Make-sure-that-there-are-no-docker-related-processes"><a href="#Make-sure-that-there-are-no-docker-related-processes" class="headerlink" title="Make sure that there are no docker related processes."></a>Make sure that there are no docker related processes.</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps aux|grep docker</span><br></pre></td></tr></table></figure>
+<h4 id="Move-the-contents-of-x2F-var-x2F-lib-x2F-docker-to-your-new-location"><a href="#Move-the-contents-of-x2F-var-x2F-lib-x2F-docker-to-your-new-location" class="headerlink" title="Move the contents of &#x2F;var&#x2F;lib&#x2F;docker to your new location."></a>Move the contents of &#x2F;var&#x2F;lib&#x2F;docker to your new location.</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /var/lib/docker /home/</span><br></pre></td></tr></table></figure>
+<h4 id="Create-a-softlink-to-default-location"><a href="#Create-a-softlink-to-default-location" class="headerlink" title="Create a softlink to default location."></a>Create a softlink to default location.</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /home/docker/ /var/lib/docker</span><br></pre></td></tr></table></figure>
+<h4 id="Start-docker-daemon"><a href="#Start-docker-daemon" class="headerlink" title="Start docker daemon."></a>Start docker daemon.</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/docker start</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2018/02/28/Linux-Ubuntu-VNC-Embeded-system-Using-VNC-on-Ubuntu-for-BeagleboneBlack-by-X11VNC-and-LXDE/" rel="prev" title="(Linux)(Ubuntu)(VNC)(Embeded system)Using VNC on Ubuntu for BeagleboneBlack by X11VNC and LXDE">
+      <i class="fa fa-chevron-left"></i> (Linux)(Ubuntu)(VNC)(Embeded system)Using VNC on Ubuntu for BeagleboneBlack by X11VNC and LXDE
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/03/29/Linux-Ubuntu-Hexoblog/" rel="next" title="(Linux)(Ubuntu) Hexo blog">
+      (Linux)(Ubuntu) Hexo blog <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%92%B0%E5%A2%83"><span class="nav-number">1.</span> <span class="nav-text">環境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ubuntu-20-04-64-Bits"><span class="nav-number">1.1.</span> <span class="nav-text">Ubuntu 20.04 (64 Bits)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%89%E8%A3%9D"><span class="nav-number">2.</span> <span class="nav-text">安裝</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C"><span class="nav-number">3.</span> <span class="nav-text">基本操作</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Image%E6%93%8D%E4%BD%9C"><span class="nav-number">3.1.</span> <span class="nav-text">Image操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Container%E6%93%8D%E4%BD%9C"><span class="nav-number">3.2.</span> <span class="nav-text">Container操作</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%95%8F%E9%A1%8C"><span class="nav-number">4.</span> <span class="nav-text">問題</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Container%E4%B8%ADapt-install%E8%87%AA%E5%8B%95%E8%A3%9C%E5%85%A8"><span class="nav-number">4.1.</span> <span class="nav-text">Container中apt install自動補全</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%9Dbash-completion"><span class="nav-number">4.1.1.</span> <span class="nav-text">安裝bash-completion</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B7%A8%E8%BC%AF-x2F-bin-x2F-bash-bashrc"><span class="nav-number">4.1.2.</span> <span class="nav-text">編輯&#x2F;bin&#x2F;bash.bashrc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A7%BB%E9%99%A4docker-clean"><span class="nav-number">4.1.3.</span> <span class="nav-text">移除docker.clean</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9B%B4%E6%94%B9Docker-Image-amp-Container%E9%A0%90%E8%A8%AD%E5%AE%89%E8%A3%9D%E4%BD%8D%E7%BD%AE"><span class="nav-number">4.2.</span> <span class="nav-text">更改Docker Image &amp; Container預設安裝位置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%B8%80"><span class="nav-number">4.2.1.</span> <span class="nav-text">方法一</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%81%9C%E6%AD%A2docker-daemon"><span class="nav-number">4.2.1.1.</span> <span class="nav-text">停止docker daemon</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B7%A8%E8%BC%AF-x2F-etc-x2F-docker-x2F-daemon-json-%E6%8C%87%E5%AE%9A%E6%96%B0%E4%BD%8D%E7%BD%AE"><span class="nav-number">4.2.1.2.</span> <span class="nav-text">編輯&#x2F;etc&#x2F;docker&#x2F;daemon.json,指定新位置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A4%87%E8%A3%BD%E7%8F%BE%E6%9C%89docker-images-x2F-containers%E5%88%B0%E6%96%B0%E4%BD%8D%E7%BD%AE"><span class="nav-number">4.2.1.3.</span> <span class="nav-text">複製現有docker images&#x2F; containers到新位置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%87%8D%E8%B5%B7docker-daemon"><span class="nav-number">4.2.1.4.</span> <span class="nav-text">重起docker daemon</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E4%BA%8C"><span class="nav-number">4.2.2.</span> <span class="nav-text">方法二</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Stop-docker-daemon"><span class="nav-number">4.2.2.1.</span> <span class="nav-text">Stop docker daemon.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Make-sure-that-there-are-no-docker-related-processes"><span class="nav-number">4.2.2.2.</span> <span class="nav-text">Make sure that there are no docker related processes.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Move-the-contents-of-x2F-var-x2F-lib-x2F-docker-to-your-new-location"><span class="nav-number">4.2.2.3.</span> <span class="nav-text">Move the contents of &#x2F;var&#x2F;lib&#x2F;docker to your new location.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Create-a-softlink-to-default-location"><span class="nav-number">4.2.2.4.</span> <span class="nav-text">Create a softlink to default location.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Start-docker-daemon"><span class="nav-number">4.2.2.5.</span> <span class="nav-text">Start docker daemon.</span></a></li></ol></li></ol></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Neil Lee</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Neil Lee</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

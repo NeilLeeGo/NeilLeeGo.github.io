@@ -1,542 +1,377 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-tw">
+<html lang="zh-tw">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
 
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Neil Lee, Embeded system, Network protocol, Linux" />
-
-
-
-
-
-
-
-
-
-
-<meta property="og:type" content="website">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="Neil&#39;s Blog">
 <meta property="og:url" content="http://yoursite.com/categories/Linux/index.html">
 <meta property="og:site_name" content="Neil&#39;s Blog">
-<meta property="og:locale" content="zh-tw">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:author" content="Neil Lee">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Neil&#39;s Blog">
+
+<link rel="canonical" href="http://yoursite.com/categories/Linux/">
 
 
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : false,
+    lang   : 'zh-tw'
   };
 </script>
 
-
-
-  <link rel="canonical" href="http://yoursite.com/categories/Linux/"/>
-
-
-
-
-
-  <title>分類: Linux | Neil's Blog</title>
+  <title>Category: Linux | Neil's Blog</title>
   
 
 
 
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-114678963-1', 'auto');
-  ga('send', 'pageview');
-</script>
 
 
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left ">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Neil's Blog</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-      
-        <h1 class="site-subtitle" itemprop="description"></h1>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Neil's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
 
+
+
+
 <nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首頁
-          </a>
-        </li>
-      
-        
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            關於
-          </a>
-        </li>
-      
-        
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分類
-          </a>
-        </li>
-      
-        
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            歸檔
-          </a>
-        </li>
-      
 
-      
-    </ul>
-  
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
-  
+  </li>
+  </ul>
 </nav>
 
 
 
- </div>
+
+</div>
     </header>
 
-    <main id="main" class="main">
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content">
+          
+
+          <div class="content category">
             
 
   
   
   
-  <div class="post-block category">
-
-    <div id="posts" class="posts-collapse">
+  <div class="post-block">
+    <div class="posts-collapse">
       <div class="collection-title">
-        <h2>Linux<small>分類</small>
+        <h2 class="collection-header">Linux
+          <small>Category</small>
         </h2>
       </div>
 
       
-        
+    <div class="collection-year">
+      <span class="collection-header">2022</span>
+    </div>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/28/Linux-Ubuntu-VNC-Embeded-system-Using-VNC-on-Ubuntu-for-BeagleboneBlack-by-X11VNC-and-LXDE/" itemprop="url">
-              
-                <span itemprop="name">(Linux)(Ubuntu)(VNC)(Embeded system)Using VNC on Ubuntu for BeagleboneBlack by X11VNC and LXDE</span>
-              
-            </a>
-        
-      </h3>
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2022-10-31T10:18:57+08:00"
+              content="2022-10-31">
+          10-31
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2022/10/31/Linux-Ubuntu-DebianPackage/" itemprop="url">
+            <span itemprop="name">Packing DEB package</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
 
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
+        <time itemprop="dateCreated"
+              datetime="2022-04-26T10:45:30+08:00"
+              content="2022-04-26">
+          04-26
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2022/04/26/Linux-VSCode-Docker-Markdown-Hexblog/" itemprop="url">
+            <span itemprop="name">(Linux)(VSCode)(Docker) Visual Studio Code use remote conainter to write markdown blog.</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2022-03-29T14:49:46+08:00"
+              content="2022-03-29">
+          03-29
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2022/03/29/Linux-Ubuntu-VPN-Openconnect/" itemprop="url">
+            <span itemprop="name">(Linux)(Ubuntu)(VPN Client) Openconnect (GlobalProtect)</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2022-03-29T14:49:33+08:00"
+              content="2022-03-29">
+          03-29
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2022/03/29/Linux-Ubuntu-Hexoblog/" itemprop="url">
+            <span itemprop="name">(Linux)(Ubuntu) Hexo blog</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2022-03-29T14:49:18+08:00"
+              content="2022-03-29">
+          03-29
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2022/03/29/Linux-Ubuntu-Docker/" itemprop="url">
+            <span itemprop="name">(Linux)(Ubuntu) Docker</span>
+          </a>
+      </div>
+
+    </header>
+  </article>
+    <div class="collection-year">
+      <span class="collection-header">2018</span>
+    </div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
               datetime="2018-02-28T20:30:26+08:00"
-              content="2018-02-28" >
+              content="2018-02-28">
           02-28
         </time>
       </div>
 
+      <div class="post-title">
+          <a class="post-title-link" href="/2018/02/28/Linux-Ubuntu-VNC-Embeded-system-Using-VNC-on-Ubuntu-for-BeagleboneBlack-by-X11VNC-and-LXDE/" itemprop="url">
+            <span itemprop="name">(Linux)(Ubuntu)(VNC)(Embeded system)Using VNC on Ubuntu for BeagleboneBlack by X11VNC and LXDE</span>
+          </a>
+      </div>
+
     </header>
   </article>
 
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/16/Linux-TFTP-server/" itemprop="url">
-              
-                <span itemprop="name">(Linux) TFTP server</span>
-              
-            </a>
-        
-      </h3>
-
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
+        <time itemprop="dateCreated"
               datetime="2018-02-16T21:13:06+08:00"
-              content="2018-02-16" >
+              content="2018-02-16">
           02-16
         </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2018/02/16/Linux-TFTP-server/" itemprop="url">
+            <span itemprop="name">(Linux) TFTP server</span>
+          </a>
       </div>
 
     </header>
   </article>
 
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/16/Linux-網卡設定VLAN-802-1Q/" itemprop="url">
-              
-                <span itemprop="name">(Linux) 網卡設定VLAN(802.1Q)</span>
-              
-            </a>
-        
-      </h3>
-
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
+        <time itemprop="dateCreated"
               datetime="2018-02-16T21:09:25+08:00"
-              content="2018-02-16" >
+              content="2018-02-16">
           02-16
         </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2018/02/16/Linux-%E7%B6%B2%E5%8D%A1%E8%A8%AD%E5%AE%9AVLAN-802-1Q/" itemprop="url">
+            <span itemprop="name">(Linux) 網卡設定VLAN(802.1Q)</span>
+          </a>
       </div>
 
     </header>
   </article>
 
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/16/Linux-Ubuntu-Tools-for-Serial-Port/" itemprop="url">
-              
-                <span itemprop="name">(Linux)(Ubuntu) Tools for Serial Port</span>
-              
-            </a>
-        
-      </h3>
-
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
+        <time itemprop="dateCreated"
               datetime="2018-02-16T13:36:37+08:00"
-              content="2018-02-16" >
+              content="2018-02-16">
           02-16
         </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2018/02/16/Linux-Ubuntu-Tools-for-Serial-Port/" itemprop="url">
+            <span itemprop="name">(Linux)(Ubuntu) Tools for Serial Port</span>
+          </a>
       </div>
 
     </header>
   </article>
 
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
 
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/16/Linux-Ubuntu-SSH-server/" itemprop="url">
-              
-                <span itemprop="name">(Linux)(Ubuntu) SSH server</span>
-              
-            </a>
-        
-      </h3>
-
       <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
+        <time itemprop="dateCreated"
               datetime="2018-02-16T13:36:34+08:00"
-              content="2018-02-16" >
+              content="2018-02-16">
           02-16
         </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2018/02/16/Linux-Ubuntu-SSH-server/" itemprop="url">
+            <span itemprop="name">(Linux)(Ubuntu) SSH server</span>
+          </a>
       </div>
 
     </header>
   </article>
 
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/16/Linux-Telnet-service/" itemprop="url">
-              
-                <span itemprop="name">(Linux) Telnet service</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-16T13:36:15+08:00"
-              content="2018-02-16" >
-          02-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/16/Linux-SNMP-Client/" itemprop="url">
-              
-                <span itemprop="name">(Linux) SNMP Client</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-16T13:36:12+08:00"
-              content="2018-02-16" >
-          02-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/16/Linux-Redmine-server-Project-management-Issue-tracking/" itemprop="url">
-              
-                <span itemprop="name">(Linux)Redmine server - Project management & Issue tracking</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-16T13:36:09+08:00"
-              content="2018-02-16" >
-          02-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/16/Linux-Radius-Server/" itemprop="url">
-              
-                <span itemprop="name">(Linux) Radius Server</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-16T13:36:06+08:00"
-              content="2018-02-16" >
-          02-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2018/02/16/Linux-PPPoE-Server-on-Different-VLAN/" itemprop="url">
-              
-                <span itemprop="name">(Linux) PPPoE Server on Different VLAN</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-02-16T13:36:00+08:00"
-              content="2018-02-16" >
-          02-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-      
     </div>
-
   </div>
   
   
@@ -544,161 +379,142 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/categories/Linux/page/2/">2</a><a class="extend next" rel="next" href="/categories/Linux/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/categories/Linux/page/2/">2</a><a class="extend next" rel="next" href="/categories/Linux/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
 
-
           </div>
           
 
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">Neil Lee</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">26</span>
-                  <span class="site-state-item-name">文章</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">15</span>
-                  <span class="site-state-item-name">分類</span>
-                </a>
-              </div>
-            
-
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Neil Lee</span>
-
-  
-</div>
-
-
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 強力驅動</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主題 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
   }
 </script>
 
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Neil Lee</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Neil Lee</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
 
 
 
 
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -716,107 +532,8 @@
 
 
 
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
 
 
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
 
   
 

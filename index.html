@@ -1,125 +1,45 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-tw">
+<html lang="zh-tw">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
 
 
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
 
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Neil Lee, Embeded system, Network protocol, Linux" />
-
-
-
-
-
-
-
-
-
-
-<meta property="og:type" content="website">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="Neil&#39;s Blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Neil&#39;s Blog">
-<meta property="og:locale" content="zh-tw">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:author" content="Neil Lee">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Neil&#39;s Blog">
+
+<link rel="canonical" href="http://yoursite.com/">
 
 
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-tw'
   };
 </script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/"/>
-
-
-
-
 
   <title>Neil's Blog</title>
   
@@ -127,240 +47,158 @@
 
 
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-114678963-1', 'auto');
-  ga('send', 'pageview');
-</script>
 
 
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
 
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
 
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-tw">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Neil's Blog</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-      
-        <h1 class="site-subtitle" itemprop="description"></h1>
-      
   </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Neil's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
   </div>
 </div>
 
+
+
+
 <nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
+  <ul id="menu" class="main-menu menu">
         <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首頁
-          </a>
-        </li>
-      
-        
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
         <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            關於
-          </a>
-        </li>
-      
-        
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分類
-          </a>
-        </li>
-      
-        
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            歸檔
-          </a>
-        </li>
-      
 
-      
-    </ul>
-  
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
 
-  
+  </li>
+  </ul>
 </nav>
 
 
 
- </div>
+
+</div>
     </header>
 
-    <main id="main" class="main">
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content">
+          
+
+          <div class="content index posts-expand">
             
-  <section id="posts" class="posts-expand">
-    
       
-
-  
-
   
   
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/28/Linux-Ubuntu-VNC-Embeded-system-Using-VNC-on-Ubuntu-for-BeagleboneBlack-by-X11VNC-and-LXDE/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/10/31/Linux-Ubuntu-DebianPackage/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Neil Lee">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neil's Blog">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/28/Linux-Ubuntu-VNC-Embeded-system-Using-VNC-on-Ubuntu-for-BeagleboneBlack-by-X11VNC-and-LXDE/" itemprop="url">(Linux)(Ubuntu)(VNC)(Embeded system)Using VNC on Ubuntu for BeagleboneBlack by X11VNC and LXDE</a></h2>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/10/31/Linux-Ubuntu-DebianPackage/" class="post-title-link" itemprop="url">Packing DEB package</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-28T20:30:26+08:00">
-                2018-02-28
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Embeded-system/" itemprop="url" rel="index">
-                    <span itemprop="name">Embeded system</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/Ubuntu/" itemprop="url" rel="index">
-                    <span itemprop="name">Ubuntu</span>
-                  </a>
-                </span>
-
-                
-                
-              
+              <time title="Created: 2022-10-31 10:18:57" itemprop="dateCreated datePublished" datetime="2022-10-31T10:18:57+08:00">2022-10-31</time>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/Ubuntu/" itemprop="url" rel="index"><span itemprop="name">Ubuntu</span></a>
+                </span>
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -368,12 +206,771 @@
     <div class="post-body" itemprop="articleBody">
 
       
-      
+          <h1 id="LaunchPad-amp-Debian-packaging"><a href="#LaunchPad-amp-Debian-packaging" class="headerlink" title="LaunchPad &amp; Debian packaging"></a>LaunchPad &amp; Debian packaging</h1><h2 id="PGP-Pretty-Good-Privacy"><a href="#PGP-Pretty-Good-Privacy" class="headerlink" title="PGP(Pretty Good Privacy)"></a>PGP(Pretty Good Privacy)</h2><ul>
+<li><p>GPG Operation</p>
+<ul>
+<li><p>Generate PGP key (Location: ~&#x2F;.gnupg&#x2F;pubring.kbx)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg --gen-key</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>List PGP keys</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg --list-sigs</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Delete PGP keys</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">gpg --delete-secret-keys &lt;public key&gt;</span><br><span class="line">gpg --delete-keys &lt;public key&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Send key to server</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">gpg --send-keys &lt;Key ID&gt; --keyserver &lt;keyserver&gt; &lt;Key ID&gt; </span><br><span class="line"><span class="comment"># Example: gpg --send-keys --keyserver keyserver.ubuntu.com A86383119836BF22</span></span><br><span class="line">gpg --search-key &lt;Key ID&gt; --keyserver &lt;keyserver&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>Reference</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://ubuntuqa.com/zh-tw/article/524.html">https://ubuntuqa.com/zh-tw/article/524.html</a></li>
+<li><a target="_blank" rel="noopener" href="https://help.ubuntu.com/community/GnuPrivacyGuardHowto">https://help.ubuntu.com/community/GnuPrivacyGuardHowto</a></li>
+<li><a target="_blank" rel="noopener" href="https://linuxhint.com/gpg-command-ubuntu/">https://linuxhint.com/gpg-command-ubuntu/</a></li>
+<li><a target="_blank" rel="noopener" href="https://ubuntuqa.com/zh-tw/article/11680.html">https://ubuntuqa.com/zh-tw/article/11680.html</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="LaunchPad"><a href="#LaunchPad" class="headerlink" title="LaunchPad"></a>LaunchPad</h2><ul>
+<li><p>Apply Ubuntu one account. Remember the registed [username]</p>
+<ul>
+<li>Reference<ul>
+<li><a target="_blank" rel="noopener" href="https://help.launchpad.net/YourAccount/NewAccount">https://help.launchpad.net/YourAccount/NewAccount</a></li>
+</ul>
+</li>
+<li>Personal launchpad homepage<ul>
+<li><a target="_blank" rel="noopener" href="https://launchpad.net/~[username]">https://launchpad.net/~[username]</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>PPA (Personal Package Archives)</p>
+<ul>
+<li>Register PGP<ul>
+<li><p>Use the GPG tool to generatePGP Key. Upload it to Ubuntu keyserver</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">gpg --gen-key</span><br><span class="line">gpg --list-sigs</span><br><span class="line"><span class="comment"># 記住sig:[Key ID]與pub:[Public key]</span></span><br><span class="line">gpg</span><br><span class="line">gpg --send-keys --keyserver keyserver.ubuntu.com [Key ID]</span><br><span class="line">gpg --search-key [[Key ID] --keyserver keyserver.ubuntu.com</span><br><span class="line"><span class="comment"># 要稍微等幾分鐘,才搜尋的到</span></span><br></pre></td></tr></table></figure>
+
+<p>The Web page  <a target="_blank" rel="noopener" href="https://keyserver.ubuntu.com/">https://keyserver.ubuntu.com/</a> can search the uploaded PGP. Fill [Key ID] to search it.</p>
+</li>
+<li><p>Open <a target="_blank" rel="noopener" href="https://launchpad.net/~[username]/+editpgpkeys">https://launchpad.net/~[username]/+editpgpkeys</a> to regist uploaded PGP.</p>
+<ol>
+<li><p>Fill the uploaded [Public key] in keyserver to <strong>Fingerprint</strong> Field.</p>
+</li>
+<li><p>Push <strong>Import Key</strong> button</p>
+</li>
+<li><p>Open an email with subject <strong>Launchpad: Confirm your OpenPGP Key</strong>. Copy the following text and save it as the <strong>pgpmsg.txt</strong>.</p>
+ <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-----BEGIN PGP MESSAGE-----</span><br><span class="line">...</span><br><span class="line">-----END PGP MESSAGE-----</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Use the GPG tool to decrypt it. There is an message contain a URL. Open the URL to regist the imported PGP key.</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpg -d pgpmsg.txt</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Git</p>
+<ul>
+<li><p>Regist SSH</p>
+<ul>
+<li>Tutorial<br><a target="_blank" rel="noopener" href="https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair">https://help.launchpad.net/YourAccount/CreatingAnSSHKeyPair</a></li>
+</ul>
+</li>
+<li><p>Operation</p>
+<ul>
+<li>Tutorial: <a target="_blank" rel="noopener" href="https://help.launchpad.net/Code/Git">https://help.launchpad.net/Code/Git</a></li>
+<li>Push and create a remote repository without a project.<ul>
+<li><p>vi .&#x2F;git&#x2F;config</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[user]</span><br><span class="line">email = &lt;email&gt;</span><br><span class="line">name = &lt;full name&gt;</span><br><span class="line">[url &quot;git+ssh://&lt;username&gt;@git.launchpad.net/&quot;]</span><br><span class="line">    insteadof = lp:</span><br><span class="line">[remote &quot;launchpad&quot;]</span><br><span class="line">url = lp:~&lt;username&gt;/+git/&lt;repo&gt;</span><br><span class="line">fetch = +refs/heads/*:refs/remotes/launchpad/*</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add launchpad lp:~&lt;username&gt;/&lt;repo&gt;</span><br><span class="line">git push launchpad</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Launchpad git URL <a target="_blank" rel="noopener" href="https://code.launchpad.net/~[username]/+git/REPO">https://code.launchpad.net/~[username]/+git/REPO</a></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="DEB"><a href="#DEB" class="headerlink" title="DEB"></a>DEB</h2><ul>
+<li><p>Debian 套件</p>
+<ul>
+<li>deb 檔案 (二進制套件)</li>
+<li>以有效且合宜的方法來向使用者發佈軟體</li>
+<li>是兩個最常見的套件格式之一 (另一個為 RPM)</li>
+</ul>
+</li>
+<li><p>Reference</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.debian.org/doc/manuals/packaging-tutorial/packaging-tutorial.zh_TW.pdf">https://www.debian.org/doc/manuals/packaging-tutorial/packaging-tutorial.zh_TW.pdf</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-hk/Deb">https://zh.wikipedia.org/zh-hk/Deb</a></li>
+<li><a target="_blank" rel="noopener" href="https://wiki.ubunetu-tw.org/index.php?title=DebPackaging">https://wiki.ubunetu-tw.org/index.php?title=DebPackaging</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.toright.com/posts/4434/deb-package-%E5%A5%97%E4%BB%B6%E5%B0%81%E8%A3%9D%E6%95%99%E5%AD%B8.html">https://blog.toright.com/posts/4434/deb-package-%E5%A5%97%E4%BB%B6%E5%B0%81%E8%A3%9D%E6%95%99%E5%AD%B8.html</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.toright.com/posts/4434/deb-package-%e5%a5%97%e4%bb%b6%e5%b0%81%e8%a3%9d%e6%95%99%e5%ad%b8.html">https://blog.toright.com/posts/4434/deb-package-%e5%a5%97%e4%bb%b6%e5%b0%81%e8%a3%9d%e6%95%99%e5%ad%b8.html</a></li>
+<li><a target="_blank" rel="noopener" href="https://wiki.debian.org/MaintainerScripts">https://wiki.debian.org/MaintainerScripts</a></li>
+<li><a target="_blank" rel="noopener" href="https://tldp.org/HOWTO/html_single/Debian-Binary-Package-Building-HOWTO/">https://tldp.org/HOWTO/html_single/Debian-Binary-Package-Building-HOWTO/</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/zh-tw/Ar_(Unix">https://zh.wikipedia.org/zh-tw/Ar_(Unix</a>)</li>
+<li><a target="_blank" rel="noopener" href="https://samwhelp.github.io/book-ubuntu-basic-skill/book/content/package/how-to-extract-package.html">https://samwhelp.github.io/book-ubuntu-basic-skill/book/content/package/how-to-extract-package.html</a></li>
+<li><a target="_blank" rel="noopener" href="https://packaging.ubuntu.com/html/debian-dir-overview.html">https://packaging.ubuntu.com/html/debian-dir-overview.html</a></li>
+<li><a target="_blank" rel="noopener" href="https://packaging.ubuntu.com/html/packaging-new-software.html">https://packaging.ubuntu.com/html/packaging-new-software.html</a></li>
+<li><a target="_blank" rel="noopener" href="https://packaging.ubuntu.com/html/">https://packaging.ubuntu.com/html/</a><br>e</li>
+</ul>
+</li>
+<li><p>apt-file: search a file’s DEB package source<br><a target="_blank" rel="noopener" href="https://shengyu7697.github.io/ubuntu-apt-file/">https://shengyu7697.github.io/ubuntu-apt-file/</a></p>
+</li>
+<li><p>How to downoad a DEB package.<br><a target="_blank" rel="noopener" href="http://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-download-package/">http://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-download-package/</a></p>
+</li>
+<li><p>How to get a DEB source package.<br>Hit: Open “livepatch”-&gt;”軟體與更新”-&gt;”Ubuntu軟體”-&gt;可由網際網路下載”源碼” first.<br><a target="_blank" rel="noopener" href="https://www.cyberciti.biz/faq/how-to-get-source-code-of-package-using-the-apt-command-on-debian-or-ubuntu/">https://www.cyberciti.biz/faq/how-to-get-source-code-of-package-using-the-apt-command-on-debian-or-ubuntu/</a></p>
+</li>
+<li><p>DEB Binary package <a target="_blank" rel="noopener" href="https://www.rocksaying.tw/archives/11239791.html">https://www.rocksaying.tw/archives/11239791.html</a></p>
+</li>
+<li><p>DEB source package</p>
+<ul>
+<li><p>Reference<br><a target="_blank" rel="noopener" href="http://www.unixlinux.online/unixlinux/linuxjc/linuxjc/201702/40361.html">http://www.unixlinux.online/unixlinux/linuxjc/linuxjc/201702/40361.html</a><br><a target="_blank" rel="noopener" href="https://www.debian.org/doc/manuals/packaging-tutorial/packaging-tutorial.zh_TW.pdf">https://www.debian.org/doc/manuals/packaging-tutorial/packaging-tutorial.zh_TW.pdf</a>  </p>
+</li>
+<li><p>.dsc file: 3.0 (quilt) - A Debian 3rd package format</p>
+</li>
+<li><p>dhmake</p>
+<ul>
+<li>single: generate single library</li>
+<li>independent: generate single library (arch-independent)</li>
+</ul>
+</li>
+<li><p>dh</p>
+<ul>
+<li><p>dh_make will generate debian folder with default rules, and would not replace debian folder’s existed files.</p>
+</li>
+<li><p>rules (source&#x2F;debian&#x2F;rules)</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.796t.com/content/1547590709.html">https://www.796t.com/content/1547590709.html</a></li>
+<li>rules usage: <code>man dh</code></li>
+</ul>
+</li>
+<li><p>Append install target by override:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/make -f</span></span><br><span class="line">%:</span><br><span class="line">dh <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line">override_dh_auto_clean:</span><br><span class="line">        [ ! -f Makefile ] || $(MAKE) distclean</span><br><span class="line"></span><br><span class="line">override_dh_installdocs:</span><br><span class="line">        dh_installdocs NEWS</span><br><span class="line"></span><br><span class="line">override_dh_auto_install:</span><br><span class="line">        dh_auto_install</span><br><span class="line">        dh_install testing.sh usr/bin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>execute_after_<target> Old dh version dosn’t support it Use previous <strong>override</strong> for it.</p>
+</li>
+<li><p>maintainer script in source&#x2F;debian&#x2F;. Example: Create source&#x2F;debian&#x2F;postinst and debuild will include it in the binary package</p>
+</li>
+<li><p>W: hello source: maintainer-script-lacks-debhelper-token debian&#x2F;postinst</p>
+<ul>
+<li>Solution: Put the <code>#DEBHELPER#</code> in the postinst file’s last line.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>debuild</p>
+<ul>
+<li><p>Modify changelog<br>Hint: Only <code>dch --increment/--newversin</code> will use the system enviroment variable DEBEMAIL&#x2F;DEBFULLNAME</p>
+  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> DEBFULLNAME=&lt;fullname&gt;</span><br><span class="line"><span class="built_in">export</span> DEBEMAIL=&lt;email&gt;</span><br><span class="line"><span class="built_in">export</span> DEBKEY=&lt;Key ID&gt;</span><br><span class="line">dch -i <span class="comment"># changelog 會是UNRELEASED,還在修改中沒要上傳時,先保持這個狀態</span></span><br><span class="line"><span class="comment"># 改code,加資料</span></span><br><span class="line">debuild -S -k<span class="variable">$DEBKEY</span></span><br><span class="line">dch -r <span class="comment"># changelog 改成unstable</span></span><br><span class="line">debsign -k <span class="variable">$DEBKEY</span> hello_2.10-2ubuntu3_source.changes</span><br><span class="line">dput ppa:neillee1210/home-test hello_2.10-2ubuntu3_source.changes</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Error from debuild<br>Solution: Do “dpkg-source –commit” first. This will put modification&#x2F;patches to source&#x2F;debian&#x2F;patches.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">dpkg-source: 資訊: using <span class="built_in">source</span> format <span class="string">&#x27;3.0 (quilt)&#x27;</span></span><br><span class="line">dpkg-source: 資訊: building hello using existing ./hello_2.10.orig.tar.gz</span><br><span class="line">dpkg-source: 警告: executable mode 0775 of <span class="string">&#x27;test.sh&#x27;</span> will not be represented <span class="keyword">in</span> diff</span><br><span class="line">dpkg-source: 資訊: <span class="built_in">local</span> changes detected, the modified files are:</span><br><span class="line">hello-2.10/test.sh</span><br><span class="line">dpkg-source: 錯誤: aborting due to unexpected upstream changes, see /tmp/hello_2.10-2ubuntu3.diff.2ggaQY</span><br><span class="line">dpkg-source: 資訊: you can integrate the <span class="built_in">local</span> changes with dpkg-source --commit</span><br><span class="line">dpkg-buildpackage: 錯誤: dpkg-source -b . subprocess returned <span class="built_in">exit</span> status 2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Verification</p>
+<ol>
+<li><p>(Error) Error: signing key fingerprint does not exist<br>Root cause: Ubuntu PPA is still building.<br>Solution: It will disapear after the build Status became “All builds were built successfully.”</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Published</th>
+<th>Status</th>
+<th>Series</th>
+<th>Section</th>
+<th>Build Status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>hello - 2.10-2ubuntu3  (changes file)</td>
+<td>2 minutes ago</td>
+<td>Published</td>
+<td>Focal</td>
+<td>Devel</td>
+<td>All builds were built successfully.</td>
+</tr>
+</tbody></table>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">neil@neil-nb:~/Workspace/Canocial/hello-deb-source-p1$ sudo add-apt-repository ppa:neillee1210/home-test</span><br><span class="line"></span><br><span class="line">更多資訊：&lt;https://launchpad.net/~neillee1210/+archive/ubuntu/home-test&gt;</span><br><span class="line">請按下 [ENTER] 繼續或 Ctrl-C 取消加入。</span><br><span class="line"></span><br><span class="line">Error: signing key fingerprint does not exist </span><br><span class="line">Failed to add key.</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>(Error) Error: 403  Forbidden<br> Root cause: Ubuntu PPA doesn’t publish DEB package.<br> Solution:  It will disapear after the build Status became “Published”</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Published</th>
+<th>Status</th>
+<th>Series</th>
+<th>Section</th>
+<th>Build Status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>hello - 2.10-2ubuntu3  (changes file)</td>
+<td>2 minutes ago</td>
+<td>Published</td>
+<td>Focal</td>
+<td>Devel</td>
+<td>All builds were built successfully.</td>
+</tr>
+</tbody></table>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">neil@neil-nb:~/Downloads$ sudo add-apt-repository ppa:neillee1210/home-test</span><br><span class="line">更多資訊：&lt;https://launchpad.net/~neillee1210/+archive/ubuntu/home-test&gt;</span><br><span class="line">請按下 [ENTER] 繼續或 Ctrl-C 取消加入。</span><br><span class="line"></span><br><span class="line">已有:1 &lt;https://dl.google.com/linux/chrome/deb&gt; stable InRelease</span><br><span class="line">已有:2 &lt;http://packages.microsoft.com/repos/code&gt; stable InRelease</span><br><span class="line">已有:3 &lt;https://repo.steampowered.com/steam&gt; stable InRelease</span><br><span class="line">已有:4 &lt;https://download.mono-project.com/repo/ubuntu&gt; stable-bionic InRelease</span><br><span class="line">已有:5 &lt;https://packages.microsoft.com/repos/ms-teams&gt; stable InRelease</span><br><span class="line">已有:6 &lt;http://tw.archive.ubuntu.com/ubuntu&gt; focal InRelease</span><br><span class="line">已有:7 &lt;http://tw.archive.ubuntu.com/ubuntu&gt; focal-updates InRelease</span><br><span class="line">已有:8 &lt;http://tw.archive.ubuntu.com/ubuntu&gt; focal-backports InRelease</span><br><span class="line">已有:9 &lt;https://download.docker.com/linux/ubuntu&gt; focal InRelease</span><br><span class="line">已有:10 &lt;http://ppa.launchpad.net/longsleep/golang-backports/ubuntu&gt; focal InRelease</span><br><span class="line">下載:11 &lt;http://security.ubuntu.com/ubuntu&gt; focal-security InRelease [114 kB]</span><br><span class="line">已有:12 &lt;http://archive.ubuntu.com/ubuntu&gt; focal InRelease</span><br><span class="line">錯誤:13 &lt;http://ppa.launchpad.net/neillee1210/home-test/ubuntu&gt; focal InRelease</span><br><span class="line">  403  Forbidden [IP: 185.125.190.52 80]</span><br><span class="line">已有:14 &lt;http://ppa.launchpad.net/yannubuntu/boot-repair/ubuntu&gt; focal InRelease</span><br><span class="line">正在讀取套件清單... 完成</span><br><span class="line">E: 無法取得 &lt;http://ppa.launchpad.net/neillee1210/home-test/ubuntu/dists/focal/InRelease，403&gt;  Forbidden [IP: 185.125.190.52 80]</span><br><span class="line">E: The repository <span class="string">&#x27;&lt;http://ppa.launchpad.net/neillee1210/home-test/ubuntu&gt; focal InRelease&#x27;</span> is not signed.</span><br><span class="line">N: Updating from such a repository can<span class="string">&#x27;t be done securely, and is therefore disabled by default.</span></span><br><span class="line"><span class="string">N: See apt-secure(8) manpage for repository creation and user configuration details.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">commit e69bc87d1d38269515eb0e3dea9fe940e70b847f (HEAD -&gt; master)</span></span><br><span class="line"><span class="string">Author: Neil Lee &lt;neil.lee@adlinktech.com&gt;</span></span><br><span class="line"><span class="string">Date:   Fri Aug 12 22:59:49 2022 +0800</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>(Error) Got the following error after git clone or checkout source folder and build source by <code>./configure;make</code> in the source folder.<br>Root caluse: Git will not reserve files’ timestamp. After clone or checkout files. the autotool’s related files and source code’s build sequence will be changed. It will cause the building error.</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">CDPATH=<span class="string">&quot;<span class="variable">$&#123;ZSH_VERSION+.&#125;</span>:&quot;</span> &amp;&amp; <span class="built_in">cd</span> . &amp;&amp; /bin/bash /home/neil/Workspace/Canocial/hello-deb-source/hello-2.10/build-aux/missing aclocal-1.14 -I m4</span><br><span class="line">/home/neil/Workspace/Canocial/hello-deb-source/hello-2.10/build-aux/missing: line 81: aclocal-1.14: <span class="built_in">command</span> not found</span><br><span class="line">WARNING: <span class="string">&#x27;aclocal-1.14&#x27;</span> is missing on your system.</span><br><span class="line">        You should only need it <span class="keyword">if</span> you modified <span class="string">&#x27;acinclude.m4&#x27;</span> or</span><br><span class="line">        <span class="string">&#x27;configure.ac&#x27;</span> or m4 files included by <span class="string">&#x27;configure.ac&#x27;</span>.</span><br><span class="line">        The <span class="string">&#x27;aclocal&#x27;</span> program is part of the GNU Automake package:</span><br><span class="line">        &lt;http://www.gnu.org/software/automake&gt;</span><br><span class="line">        It also requires GNU Autoconf, GNU m4 and Perl <span class="keyword">in</span> order to run:</span><br><span class="line">        &lt;http://www.gnu.org/software/autoconf&gt;</span><br><span class="line">        &lt;http://www.gnu.org/software/m4/&gt;</span><br><span class="line">        &lt;http://www.perl.org/&gt;</span><br><span class="line">make: *** [Makefile:1450：aclocal.m4] 錯誤 127</span><br></pre></td></tr></table></figure></li>
+</ol>
+<ul>
+<li><p><strong>Workaround</strong><br>Do <code>autoreconfig -i -f</code> first</p>
+</li>
+<li><p><strong>Solution</strong><br>Do not build source in the source code folder directoly.We must re-generate source code folder from the dsc file.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> hello-2.10/</span><br><span class="line">./configure; make; debuild -us -uc</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>Reference</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://iter01.com/649465.html">https://iter01.com/649465.html</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><h3 id="GIT-Repository-URL"><a href="#GIT-Repository-URL" class="headerlink" title="GIT Repository URL"></a>GIT Repository URL</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://git.launchpad.net/~neillee1210/+git/home-test </span><br></pre></td></tr></table></figure>
+
+<h3 id="LaunchPad-PPA-URL"><a href="#LaunchPad-PPA-URL" class="headerlink" title="LaunchPad PPA URL"></a>LaunchPad PPA URL</h3><ul>
+<li>Adding this PPA to your system by</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:neillee1210/home-test</span><br><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Or update PPA URL to system’s software sources.</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">deb https://ppa.launchpadcontent.net/neillee1210/home-test/ubuntu focal main </span><br><span class="line">deb-src https://ppa.launchpadcontent.net/neillee1210/home-test/ubuntu focal main</span><br></pre></td></tr></table></figure>
+
+<h3 id="Output-messages-from-installation-and-testing-sh"><a href="#Output-messages-from-installation-and-testing-sh" class="headerlink" title="Output messages from installation and testing.sh"></a>Output messages from installation and testing.sh</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">neil@neil-nb:~$ sudo apt install hello</span><br><span class="line">正在讀取套件清單... 完成</span><br><span class="line">正在重建相依關係          </span><br><span class="line">正在讀取狀態資料... 完成</span><br><span class="line">下列【新】套件將會被安裝：</span><br><span class="line">  hello</span><br><span class="line">升級 0 個，新安裝 1 個，移除 0 個，有 0 個未被升級。</span><br><span class="line">需要下載 52.3 kB 的套件檔。</span><br><span class="line">此操作完成之後，會多佔用 284 kB 的磁碟空間。</span><br><span class="line">下載:1 http://ppa.launchpad.net/neillee1210/home-test/ubuntu focal/main amd64 hello amd64 2.10-2ubuntu3 [52.3 kB]</span><br><span class="line">取得 52.3 kB 用了 1s (43.9 kB/s)</span><br><span class="line">選取了原先未選的套件 hello。</span><br><span class="line">（讀取資料庫 ... 目前共安裝了 255157 個檔案和目錄。）</span><br><span class="line">正在準備解包 .../hello_2.10-2ubuntu3_amd64.deb……</span><br><span class="line">解開 hello (2.10-2ubuntu3) 中...</span><br><span class="line">設定 hello (2.10-2ubuntu3) ...</span><br><span class="line">this is a <span class="built_in">test</span> from Neil Lee</span><br><span class="line">執行 man-db (2.9.1-1) 的觸發程式……</span><br><span class="line">執行 install-info (6.7.0.dfsg.2-5) 的觸發程式……</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">neil@neil-nb:~$ dpkg -S testing.sh; testing.sh</span><br><span class="line">hello: /usr/bin/testing.sh</span><br><span class="line">this is a <span class="built_in">test</span> from Neil Lee</span><br><span class="line">neil@neil-nb:~$ </span><br></pre></td></tr></table></figure>
 
       
-        
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/04/26/Linux-VSCode-Docker-Markdown-Hexblog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Neil Lee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
           
-            <p><strong>前言</strong></p>
+            <a href="/2022/04/26/Linux-VSCode-Docker-Markdown-Hexblog/" class="post-title-link" itemprop="url">(Linux)(VSCode)(Docker) Visual Studio Code use remote conainter to write markdown blog.</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-04-26 10:45:30" itemprop="dateCreated datePublished" datetime="2022-04-26T10:45:30+08:00">2022-04-26</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming-language/" itemprop="url" rel="index"><span itemprop="name">Programming language</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Software-engineering/" itemprop="url" rel="index"><span itemprop="name">Software engineering</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Software-engineering/Development/" itemprop="url" rel="index"><span itemprop="name">Development</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming-language/Markdown/" itemprop="url" rel="index"><span itemprop="name">Markdown</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p><img src="/../figure/Linux-VSCode-Docker-Markdown-Hexblog_figure_1.png" alt="flash emmc layout"></p>
+<ul>
+<li>使用<strong>Local OS</strong>環境來編輯程式原始碼或文件<ul>
+<li>原始碼與文件存放在OS本機檔案系統</li>
+</ul>
+</li>
+<li>使用<strong>Docker Container</strong>環境來進行程式執行(Runtime)與除錯<ul>
+<li>原始碼與文件透過docker volume&#x2F;folder mount到容器檔案系統</li>
+<li>執行&#x2F;除錯環境所需的各式軟體套件安裝於容器(Container)與OS區隔,保護OS環境</li>
+<li>透過VSCode server,執行程式&#x2F;進行除錯&#x2F;Terminal操作皆可在OS中VSCode操作</li>
+</ul>
+</li>
+</ul>
+<h2 id="安裝操作"><a href="#安裝操作" class="headerlink" title="安裝操作"></a>安裝操作</h2><h3 id="Docker-Hexo-server"><a href="#Docker-Hexo-server" class="headerlink" title="Docker(Hexo server)"></a>Docker(Hexo server)</h3><ul>
+<li>Docker container安裝Hexo server<ul>
+<li><p>git clone <a target="_blank" rel="noopener" href="https://github.com/NeilLeeGo/docker-hexo">https://github.com/NeilLeeGo/docker-hexo</a></p>
+</li>
+<li><p>建立Hexo docker image</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-hexo/buid.sh</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>建立與執行Hexo docker container</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-hexo/run.sh</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
+<h3 id="VSCode"><a href="#VSCode" class="headerlink" title="VSCode"></a>VSCode</h3><ul>
+<li>安裝遠端總管<ul>
+<li>點選 “延伸模組” -&gt; Marketplace 搜尋 “Remote Container” -&gt; “安裝”</li>
+</ul>
+</li>
+<li>建議安裝Markdown套件<ul>
+<li>點選 “延伸模組” -&gt; Marketplace 搜尋<ul>
+<li>Markdown All in One</li>
+<li>Mardkwonlint (語法檢查)</li>
+<li>Markdown PDF (轉PDF)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><ul>
+<li><p>VSCode編輯原始碼或文件(Markdown編寫)</p>
+<ul>
+<li>“遠端總管”-&gt; “CONTAINERS” -&gt; “hexo” (滑鼠右鍵) -&gt; “Attach to container”<br><img src="/../figure/Linux-VSCode-Docker-Markdown-Hexblog_figure_2.png" alt="flash emmc layout"></li>
+<li>檔案-&gt;開啟工作區資料夾(Hexo資料夾)-&gt;進行Hexo blog post&#x2F; draft編寫</li>
+</ul>
+</li>
+<li><p>VSCode執行與除錯環境(Hexo操作)</p>
+<ul>
+<li><p>“終端機”-&gt;”新增終端”</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><img src="/../figure/Linux-VSCode-Docker-Markdown-Hexblog_figure_3.png" alt="flash emmc layout"></p>
+</li>
+</ul>
+<h2 id="參考"><a href="#參考" class="headerlink" title="參考"></a>參考</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/remote/containers">Developing inside a Container</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/03/29/Linux-Ubuntu-VPN-Openconnect/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Neil Lee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/29/Linux-Ubuntu-VPN-Openconnect/" class="post-title-link" itemprop="url">(Linux)(Ubuntu)(VPN Client) Openconnect (GlobalProtect)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-03-29 14:49:46" itemprop="dateCreated datePublished" datetime="2022-03-29T14:49:46+08:00">2022-03-29</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/Ubuntu/" itemprop="url" rel="index"><span itemprop="name">Ubuntu</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h1><h2 id="Ubuntu-20-04-64-Bits"><a href="#Ubuntu-20-04-64-Bits" class="headerlink" title="Ubuntu 20.04 (64 Bits)"></a>Ubuntu 20.04 (64 Bits)</h2><h1 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h1><h2 id="執行下列指令"><a href="#執行下列指令" class="headerlink" title="執行下列指令"></a>執行下列指令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openconnect network-manager-openconnect network-manager-openconnect-gnome</span><br></pre></td></tr></table></figure>
+
+<h1 id="設定"><a href="#設定" class="headerlink" title="設定"></a>設定</h1><ul>
+<li>Ubuntu GUI 設定–&gt;網路–&gt;VPN–&gt;Openconnect –&gt; VPN Protocol(GlobalProtect)</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/03/29/Linux-Ubuntu-Hexoblog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Neil Lee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/29/Linux-Ubuntu-Hexoblog/" class="post-title-link" itemprop="url">(Linux)(Ubuntu) Hexo blog</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-03-29 14:49:33" itemprop="dateCreated datePublished" datetime="2022-03-29T14:49:33+08:00">2022-03-29</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/Ubuntu/" itemprop="url" rel="index"><span itemprop="name">Ubuntu</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h1><h2 id="Ubuntu-20-04-64-Bits"><a href="#Ubuntu-20-04-64-Bits" class="headerlink" title="Ubuntu 20.04 (64 Bits)"></a>Ubuntu 20.04 (64 Bits)</h2><h1 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h1><h2 id="執行下列指令"><a href="#執行下列指令" class="headerlink" title="執行下列指令"></a>執行下列指令</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">apt-get --yes install curl dirmngr apt-transport-https lsb-release ca-certificates</span><br><span class="line">curl -sL https://deb.nodesource.com/setup_12.x | bash -</span><br><span class="line">apt-get update</span><br><span class="line">apt-get --yes install nodejs </span><br><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+
+<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><h2 id="安裝Theme-範例-Next"><a href="#安裝Theme-範例-Next" class="headerlink" title="安裝Theme (範例: Next)"></a>安裝Theme (範例: Next)</h2><h3 id="下載Next"><a href="#下載Next" class="headerlink" title="下載Next"></a>下載Next</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd hexo</span><br><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<h3 id="修改hexo-x2F-config-yml"><a href="#修改hexo-x2F-config-yml" class="headerlink" title="修改hexo&#x2F;_config.yml"></a>修改hexo&#x2F;_config.yml</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: next</span><br></pre></td></tr></table></figure>
+<h2 id="撰寫Markdown"><a href="#撰寫Markdown" class="headerlink" title="撰寫Markdown"></a>撰寫Markdown</h2><ul>
+<li>草稿<br>hexo new –draft</li>
+<li>草稿定案文本<br>hexo publish <filename><h2 id="產生靜態網頁"><a href="#產生靜態網頁" class="headerlink" title="產生靜態網頁"></a>產生靜態網頁</h2></li>
+<li>僅文本內容<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure></li>
+<li>包含草稿內容<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate --draft</span><br></pre></td></tr></table></figure>
+<h2 id="啟動Web服務-預覽Hexo畫面"><a href="#啟動Web服務-預覽Hexo畫面" class="headerlink" title="啟動Web服務(預覽Hexo畫面)"></a>啟動Web服務(預覽Hexo畫面)</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/03/29/Linux-Ubuntu-Docker/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Neil Lee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/29/Linux-Ubuntu-Docker/" class="post-title-link" itemprop="url">(Linux)(Ubuntu) Docker</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-03-29 14:49:18" itemprop="dateCreated datePublished" datetime="2022-03-29T14:49:18+08:00">2022-03-29</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-10-17 21:43:56" itemprop="dateModified" datetime="2022-10-17T21:43:56+08:00">2022-10-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/Ubuntu/" itemprop="url" rel="index"><span itemprop="name">Ubuntu</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="環境"><a href="#環境" class="headerlink" title="環境"></a>環境</h1><h2 id="Ubuntu-20-04-64-Bits"><a href="#Ubuntu-20-04-64-Bits" class="headerlink" title="Ubuntu 20.04 (64 Bits)"></a>Ubuntu 20.04 (64 Bits)</h2><h1 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h1><ul>
+<li>執行下列指令<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove docker docker-engine docker.io containerd runc</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install ca-certificates curl gnupg lsb-release</span><br><span class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg</span><br><span class="line">echo \</span><br><span class="line">&quot;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \</span><br><span class="line">$(lsb_release -cs) stable&quot; | sudo tee /etc/apt/sources.list.d/docker.list &gt; /dev/null</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><h2 id="Image操作"><a href="#Image操作" class="headerlink" title="Image操作"></a>Image操作</h2><ul>
+<li><p>安裝 (範例:ubuntu image)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker search ubuntu -f is-official=true</span><br><span class="line">docker pull ubuntu</span><br></pre></td></tr></table></figure></li>
+<li><p>移除</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  docker rmi &lt;Image name/Image ID&gt;</span><br><span class="line">* 操作內容</span><br></pre></td></tr></table></figure>
+<p>docker run -it ubuntu &#x2F;bin&#x2F;bash </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* 自訂Image</span><br><span class="line">  * By Interaction</span><br><span class="line">    1. 操作內容</span><br></pre></td></tr></table></figure>
+<pre><code>  docker run -it ubuntu /bin/bash 
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">2. 手動安裝環境</span><br><span class="line">3. 暫時離開container</span><br><span class="line">    </span><br><span class="line">    ctrl+p, ctrl+q</span><br><span class="line"></span><br><span class="line">4. 查詢container名稱</span><br></pre></td></tr></table></figure>
+  docker container ls -a
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5. 建立Image</span><br></pre></td></tr></table></figure>
+  docker commit -m &lt;message&gt; -a &lt;author&gt; &lt;container ID&gt; &lt;tag&gt; 
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">* Dockerfile方法</span><br><span class="line">  1. 編寫Dockerfile (範例: Hexo)</span><br></pre></td></tr></table></figure>
+  FROM ubuntu
+  MAINTAINER Neil
+  ARG DEBIAN_FRONTEND=noninteractive
+  ENV TZ=Asia/Taipei
+  RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime &amp;&amp; echo $TZ &gt; /etc/timezone
+
+  RUN apt-get update
+  RUN apt-get --yes install git
+  RUN apt-get --yes install curl dirmngr apt-transport-https lsb-release ca-certificates
+  RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+  RUN apt-get update
+  RUN apt-get --yes install nodejs 
+
+  RUN npm install hexo-cli -g
+  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2. 建立Image</span><br></pre></td></tr></table></figure>
+  docker build -t &lt;image name&gt; -f &lt;docker-file&gt; &lt;path&gt;
+</code></pre>
+</li>
+<li><p>Export Image</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker export &lt;.tar&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>Import Image</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker import &lt;.tar&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="Container操作"><a href="#Container操作" class="headerlink" title="Container操作"></a>Container操作</h2></li>
+<li><p>列出所有container狀態</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a</span><br><span class="line">docker container ls -a</span><br></pre></td></tr></table></figure></li>
+<li><p>移除所有停止的container</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker container prune</span><br></pre></td></tr></table></figure></li>
+<li><p>Detaching Without Stopping container</p>
+<p>ctrl + p, ctrl + q</p>
+</li>
+<li><p>Reattaching Container</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker attach &lt;container&gt;</span><br></pre></td></tr></table></figure></li>
+<li><p>使用root身份登入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec -u 0 -it &lt;container ID&gt; /bin/bash</span><br></pre></td></tr></table></figure></li>
+<li><p>Docker volume &amp; network (host)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --net=host -it -v &lt;host path&gt;:/&lt;container path&gt; &lt;image ID&gt; /bin/bash</span><br></pre></td></tr></table></figure>
+<h1 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h1><h2 id="Container中apt-install自動補全"><a href="#Container中apt-install自動補全" class="headerlink" title="Container中apt install自動補全"></a>Container中apt install自動補全</h2><h3 id="安裝bash-completion"><a href="#安裝bash-completion" class="headerlink" title="安裝bash-completion"></a>安裝bash-completion</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install bash-completion</span><br></pre></td></tr></table></figure>
+<h3 id="編輯-x2F-bin-x2F-bash-bashrc"><a href="#編輯-x2F-bin-x2F-bash-bashrc" class="headerlink" title="編輯&#x2F;bin&#x2F;bash.bashrc"></a>編輯&#x2F;bin&#x2F;bash.bashrc</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">if ! shopt -oq posix; then</span><br><span class="line"> if [ -f /usr/share/bash-completion/bash_completion ]; then</span><br><span class="line">   . /usr/share/bash-completion/bash_completion</span><br><span class="line"> elif [ -f /etc/bash_completion ]; then</span><br><span class="line">   . /etc/bash_completion</span><br><span class="line"> fi</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<h3 id="移除docker-clean"><a href="#移除docker-clean" class="headerlink" title="移除docker.clean"></a>移除docker.clean</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rm /etc/apt/apt.conf.d/docker.clean</span><br><span class="line">apt-get update</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="更改Docker-Image-amp-Container預設安裝位置"><a href="#更改Docker-Image-amp-Container預設安裝位置" class="headerlink" title="更改Docker Image &amp; Container預設安裝位置"></a>更改Docker Image &amp; Container預設安裝位置</h2><h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><h4 id="停止docker-daemon"><a href="#停止docker-daemon" class="headerlink" title="停止docker daemon"></a>停止docker daemon</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service docker stop</span><br></pre></td></tr></table></figure>
+<h4 id="編輯-x2F-etc-x2F-docker-x2F-daemon-json-指定新位置"><a href="#編輯-x2F-etc-x2F-docker-x2F-daemon-json-指定新位置" class="headerlink" title="編輯&#x2F;etc&#x2F;docker&#x2F;daemon.json,指定新位置"></a>編輯&#x2F;etc&#x2F;docker&#x2F;daemon.json,指定新位置</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;data-root&quot;: &quot;/path/to/your/docker&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="複製現有docker-images-x2F-containers到新位置"><a href="#複製現有docker-images-x2F-containers到新位置" class="headerlink" title="複製現有docker images&#x2F; containers到新位置"></a>複製現有docker images&#x2F; containers到新位置</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo rsync -aP /var/lib/docker/ /path/to/your/docker</span><br></pre></td></tr></table></figure>
+<h4 id="重起docker-daemon"><a href="#重起docker-daemon" class="headerlink" title="重起docker daemon"></a>重起docker daemon</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service docker start</span><br></pre></td></tr></table></figure>
+<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3><h4 id="Stop-docker-daemon"><a href="#Stop-docker-daemon" class="headerlink" title="Stop docker daemon."></a>Stop docker daemon.</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/docker stop</span><br></pre></td></tr></table></figure>
+<h4 id="Make-sure-that-there-are-no-docker-related-processes"><a href="#Make-sure-that-there-are-no-docker-related-processes" class="headerlink" title="Make sure that there are no docker related processes."></a>Make sure that there are no docker related processes.</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps aux|grep docker</span><br></pre></td></tr></table></figure>
+<h4 id="Move-the-contents-of-x2F-var-x2F-lib-x2F-docker-to-your-new-location"><a href="#Move-the-contents-of-x2F-var-x2F-lib-x2F-docker-to-your-new-location" class="headerlink" title="Move the contents of &#x2F;var&#x2F;lib&#x2F;docker to your new location."></a>Move the contents of &#x2F;var&#x2F;lib&#x2F;docker to your new location.</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv /var/lib/docker /home/</span><br></pre></td></tr></table></figure>
+<h4 id="Create-a-softlink-to-default-location"><a href="#Create-a-softlink-to-default-location" class="headerlink" title="Create a softlink to default location."></a>Create a softlink to default location.</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /home/docker/ /var/lib/docker</span><br></pre></td></tr></table></figure>
+<h4 id="Start-docker-daemon"><a href="#Start-docker-daemon" class="headerlink" title="Start docker daemon."></a>Start docker daemon.</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/docker start</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/28/Linux-Ubuntu-VNC-Embeded-system-Using-VNC-on-Ubuntu-for-BeagleboneBlack-by-X11VNC-and-LXDE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Neil Lee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/02/28/Linux-Ubuntu-VNC-Embeded-system-Using-VNC-on-Ubuntu-for-BeagleboneBlack-by-X11VNC-and-LXDE/" class="post-title-link" itemprop="url">(Linux)(Ubuntu)(VNC)(Embeded system)Using VNC on Ubuntu for BeagleboneBlack by X11VNC and LXDE</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-02-28 20:30:26" itemprop="dateCreated datePublished" datetime="2018-02-28T20:30:26+08:00">2018-02-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-03-28 16:19:33" itemprop="dateModified" datetime="2022-03-28T16:19:33+08:00">2022-03-28</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Embeded-system/" itemprop="url" rel="index"><span itemprop="name">Embeded system</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/Ubuntu/" itemprop="url" rel="index"><span itemprop="name">Ubuntu</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>前言</strong></p>
 <ul>
 <li>希望在Beaglebone black(BBB)上做一些開發,又能達成<ul>
 <li>Ubuntu系統   </li>
@@ -382,185 +979,112 @@
 <li>桌面被Render到Host(BBB)的Display -&gt; 改善效能<!-- --></li>
 </ul>
 </li>
-<li><p>因此使用下列的安裝方式</p>
-<ol>
-<li>安裝Ubuntu server,不要有桌面環境</li>
+<li>因此使用下列的安裝方式<ol>
+<li><p>安裝Ubuntu server,不要有桌面環境</p>
+</li>
 <li><p>安裝X11VNC (VNC server)</p>
-<pre><code>sudo apt-get install x11vnc
-</code></pre></li>
-<li>安裝XVFB(X virtual framebuffer)<ul>
+<pre><code> sudo apt-get install x11vnc
+</code></pre>
+</li>
+<li><p>安裝XVFB(X virtual framebuffer)</p>
+<ul>
 <li>A display server implementing the X11 display server protocol</li>
-<li><a href="https://en.wikipedia.org/wiki/Xvfb" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Xvfb</a><!-- -->
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Xvfb">https://en.wikipedia.org/wiki/Xvfb</a> <!-- -->
   sudo apt-get install xvfb</li>
 </ul>
 </li>
 <li><p>安裝LXDE (Lubuntu的Window manager)</p>
-<pre><code>sudo apt-get install lxde
-</code></pre></li>
+<pre><code> sudo apt-get install lxde
+</code></pre>
+</li>
 <li><p>啟動XVFB</p>
-<pre><code>export DISPLAY=:1
-Xvfb :1 -screen 0 1024x768x16 &amp;
-startlxde &amp;
-x11vnc -display :1 -bg -nopw -listen local_IP -xkb
-</code></pre></li>
+<pre><code> export DISPLAY=:1
+ Xvfb :1 -screen 0 1024x768x16 &amp;
+ startlxde &amp;
+ x11vnc -display :1 -bg -nopw -listen local_IP -xkb
+</code></pre>
+</li>
 </ol>
 </li>
 </ul>
 <p><strong>延伸閱讀</strong></p>
 <ul>
-<li>X Window介紹 <a href="http://linux.vbird.org/linux_basic/0590xwindow.php" target="_blank" rel="noopener">http://linux.vbird.org/linux_basic/0590xwindow.php</a></li>
+<li>X Window介紹 <a target="_blank" rel="noopener" href="http://linux.vbird.org/linux_basic/0590xwindow.php">http://linux.vbird.org/linux_basic/0590xwindow.php</a></li>
 </ul>
 
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/C-C-陣列大小sizeof/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/C-CPP-%E9%99%A3%E5%88%97%E5%A4%A7%E5%B0%8Fsizeof/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Neil Lee">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neil's Blog">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/16/C-C-陣列大小sizeof/" itemprop="url">(C)(C++)陣列大小sizeof()</a></h2>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/02/16/C-CPP-%E9%99%A3%E5%88%97%E5%A4%A7%E5%B0%8Fsizeof/" class="post-title-link" itemprop="url">(C)(C++)陣列大小sizeof()</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-16T21:41:06+08:00">
-                2018-02-16
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Programming-language/" itemprop="url" rel="index">
-                    <span itemprop="name">Programming language</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Programming-language/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Programming-language/C/" itemprop="url" rel="index">
-                    <span itemprop="name">C++</span>
-                  </a>
-                </span>
-
-                
-                
-              
+              <time title="Created: 2018-02-16 21:41:06" itemprop="dateCreated datePublished" datetime="2018-02-16T21:41:06+08:00">2018-02-16</time>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-03-29 08:22:30" itemprop="dateModified" datetime="2022-03-29T08:22:30+08:00">2022-03-29</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming-language/" itemprop="url" rel="index"><span itemprop="name">Programming language</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming-language/C/" itemprop="url" rel="index"><span itemprop="name">C</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming-language/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
+                </span>
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -568,228 +1092,164 @@ x11vnc -display :1 -bg -nopw -listen local_IP -xkb
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <ul>
+          <ul>
 <li><p>sizeof( )是一個編譯時期的運算子，而非執行時期的運算子，所以當你程式編譯完成時，其值就已經決定了。</p>
 <ul>
-<li><p>CPU/ OS 32-Bits</p>
-<pre><code>int gIntArray[10];
-char gCharArray[10];
-void main(void)            
-{            
-    printf(&quot;sizeof(gIntArray): %d&quot;, sizeof(gIntArray));            
-    // 10 * 4 bytes
-    printf(&quot;sizeof(gIntArray)/sizeof(gIntArray[0]): %d&quot;, sizeof(gIntArray)/sizeof(gIntArray[0]));
-    // 10
-    printf(&quot;sizeof(gIntArray)/sizeof(int): %d&quot;, sizeof(gIntArray)/sizeof(int));
-    // 10
+<li><p>CPU&#x2F; OS 32-Bits</p>
+<pre><code>  int gIntArray[10];
+  char gCharArray[10];
+  void main(void)            
+  &#123;            
+      printf(&quot;sizeof(gIntArray): %d&quot;, sizeof(gIntArray));            
+      // 10 * 4 bytes
+      printf(&quot;sizeof(gIntArray)/sizeof(gIntArray[0]): %d&quot;, sizeof(gIntArray)/sizeof(gIntArray[0]));
+      // 10
+      printf(&quot;sizeof(gIntArray)/sizeof(int): %d&quot;, sizeof(gIntArray)/sizeof(int));
+      // 10
 
-    printf(&quot;sizeof(gCharArray): %d&quot;, sizeof(gCharArray));            
-    // 10 * 1 bytes
-    printf(&quot;sizeof(gCharArray)/sizeof(gCharArray[0]): %d&quot;, sizeof(gCharArray)/sizeof(gCharArray[0]));
-    // 10
-    printf(&quot;sizeof(gCharArray)/sizeof(char): %d&quot;, sizeof(gCharArray)/sizeof(char));
-    // 10
-}
-</code></pre></li>
+      printf(&quot;sizeof(gCharArray): %d&quot;, sizeof(gCharArray));            
+      // 10 * 1 bytes
+      printf(&quot;sizeof(gCharArray)/sizeof(gCharArray[0]): %d&quot;, sizeof(gCharArray)/sizeof(gCharArray[0]));
+      // 10
+      printf(&quot;sizeof(gCharArray)/sizeof(char): %d&quot;, sizeof(gCharArray)/sizeof(char));
+      // 10
+  &#125;
+</code></pre>
+</li>
 </ul>
 </li>
 <li><p>陣列大小的計算僅適用於靜態陣列，若是當成參數傳給 Function，Function收到的只是一個指標</p>
 <ul>
-<li><p>CPU/ OS 32-Bits</p>
-<pre><code>int gIntArray[10];
-char gCharArray[10];
-void main(void)            
-{
-    function(gIntArray, gCharArray);            
-}
-void function (int intArray[], char charArray[])
-{
-    printf(&quot;sizeof(intArray): %d&quot;, sizeof(intArray));            
-    // pointer 4 bytes
-    printf(&quot;sizeof(intArray)/sizeof(intArray[0]): %d&quot;, sizeof(intArray)/sizeof(intArray[0]));
-    // 1 = (pointer 4 bytes) / (int 4 bytes)
-    printf(&quot;sizeof(intArray)/sizeof(int): %d&quot;, sizeof(intArray)/sizeof(int));
-    // 1 = (pointer 4 bytes) / (int 4 bytes)
+<li><p>CPU&#x2F; OS 32-Bits</p>
+<pre><code>  int gIntArray[10];
+  char gCharArray[10];
+  void main(void)            
+  &#123;
+      function(gIntArray, gCharArray);            
+  &#125;
+  void function (int intArray[], char charArray[])
+  &#123;
+      printf(&quot;sizeof(intArray): %d&quot;, sizeof(intArray));            
+      // pointer 4 bytes
+      printf(&quot;sizeof(intArray)/sizeof(intArray[0]): %d&quot;, sizeof(intArray)/sizeof(intArray[0]));
+      // 1 = (pointer 4 bytes) / (int 4 bytes)
+      printf(&quot;sizeof(intArray)/sizeof(int): %d&quot;, sizeof(intArray)/sizeof(int));
+      // 1 = (pointer 4 bytes) / (int 4 bytes)
 
-    printf(&quot;sizeof(charArray): %d&quot;, sizeof(charArray));            
-    // pointer 4 bytes
-    printf(&quot;sizeof(charArray)/sizeof(charArray[0]): %d&quot;, sizeof(charArray)/sizeof(charArray[0]));
-    // 4 = (pointer 4 bytes) / (char 1 byte)
-    printf(&quot;sizeof(charArray)/sizeof(char): %d&quot;, sizeof(charArray)/sizeof(char));
-    // 4 = (pointer 4 bytes) / (char 1 byte)
-} 
-</code></pre></li>
-<li><p>CPU/ OS 64-Bits</p>
-<pre><code>int gIntArray[10];
-char gCharArray[10];
-void main(void)            
-{
-    function(gIntArray, gCharArray);            
-}
-void function (int intArray[], char charArray[])
-{
-    printf(&quot;sizeof(intArray)/sizeof(intArray[0]): %d&quot;, sizeof(intArray)/sizeof(intArray[0]));
-    // 2 = (pointer 8 bytes) / (int 4 bytes)    
+      printf(&quot;sizeof(charArray): %d&quot;, sizeof(charArray));            
+      // pointer 4 bytes
+      printf(&quot;sizeof(charArray)/sizeof(charArray[0]): %d&quot;, sizeof(charArray)/sizeof(charArray[0]));
+      // 4 = (pointer 4 bytes) / (char 1 byte)
+      printf(&quot;sizeof(charArray)/sizeof(char): %d&quot;, sizeof(charArray)/sizeof(char));
+      // 4 = (pointer 4 bytes) / (char 1 byte)
+  &#125; 
+</code></pre>
+</li>
+<li><p>CPU&#x2F; OS 64-Bits</p>
+<pre><code>  int gIntArray[10];
+  char gCharArray[10];
+  void main(void)            
+  &#123;
+      function(gIntArray, gCharArray);            
+  &#125;
+  void function (int intArray[], char charArray[])
+  &#123;
+      printf(&quot;sizeof(intArray)/sizeof(intArray[0]): %d&quot;, sizeof(intArray)/sizeof(intArray[0]));
+      // 2 = (pointer 8 bytes) / (int 4 bytes)    
 
-    printf(&quot;sizeof(charArray)/sizeof(charArray[0]): %d&quot;, sizeof(charArray)/sizeof(charArray[0]));
-    // 8 = (pointer 8 bytes) / (char 1 byte)
-}
-</code></pre></li>
+      printf(&quot;sizeof(charArray)/sizeof(charArray[0]): %d&quot;, sizeof(charArray)/sizeof(charArray[0]));
+      // 8 = (pointer 8 bytes) / (char 1 byte)
+  &#125;
+</code></pre>
+</li>
 </ul>
 </li>
 <li><p>所以並無法計算陣列的大小，一般解決的辦法是在呼叫前先計算好陣列大小，然後當成參數一併傳給 Function</p>
 <ul>
 <li><p>CPU, OS 32-Bits</p>
-<pre><code>int gInitArray[10];
-char gCharArray[10]
+<pre><code>  int gInitArray[10];
+  char gCharArray[10]
 
-void main(void)            
-{
-    function(gIntArray, sizeof(gIntArray)/sizeof(gIntArray[0]));            
-}
-void function (int intArray[], int length)
-{
-    printf(&quot;size of intArray: %d&quot;, length * sizeof(intArray[0]));
-    // 10 * 4 bytes
-}
-</code></pre></li>
+  void main(void)            
+  &#123;
+      function(gIntArray, sizeof(gIntArray)/sizeof(gIntArray[0]));            
+  &#125;
+  void function (int intArray[], int length)
+  &#123;
+      printf(&quot;size of intArray: %d&quot;, length * sizeof(intArray[0]));
+      // 10 * 4 bytes
+  &#125;
+</code></pre>
+</li>
 </ul>
 </li>
 </ul>
 
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Linux-TFTP-server/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Neil Lee">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neil's Blog">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/16/Linux-TFTP-server/" itemprop="url">(Linux) TFTP server</a></h2>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/02/16/Linux-TFTP-server/" class="post-title-link" itemprop="url">(Linux) TFTP server</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-16T21:13:06+08:00">
-                2018-02-16
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
+              <time title="Created: 2018-02-16 21:13:06" itemprop="dateCreated datePublished" datetime="2018-02-16T21:13:06+08:00">2018-02-16</time>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-03-28 16:19:33" itemprop="dateModified" datetime="2022-03-28T16:19:33+08:00">2022-03-28</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -797,202 +1257,147 @@ void function (int intArray[], int length)
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <ol>
+          <ol>
 <li><p>安裝TFTP Server</p>
-<pre><code>sudo apt-get install xinetd tftpd
-</code></pre><ul>
+<pre><code> sudo apt-get install xinetd tftpd
+</code></pre>
+<ul>
 <li>Ubuntu下TFTP是不能單獨運作的，需要xinetd這個網路管理的背景程式之支援。 於是我們同時安裝這兩個套件。</li>
 </ul>
 </li>
 <li><p>設定xinetd.conf </p>
-<pre><code>sudo vi /etc/xinetd.conf
-</code></pre> <!-- -->
-<pre><code># Simple configuration file for xinetd
-# Some defaults, and include /etc/xinetd.d/
-defaults
-{
-# Please note that you need a log_type line to be able to use log_on_success
-# and log_on_failure. The default is the following :
-# log_type = SYSLOG daemon info
-}
-includedir /etc/xinetd.d
-</code></pre><p> 雖然我們可以將設定內容寫入此處，但還有更好的設定檔設定方法。用下列方法設定</p>
-<pre><code>    sudo vim /etc/xinetd.d/tftp
-&lt;!-- --&gt; 
-    service tftp {
-            socket_type     = dgram
-            protocol        = udp
-            wait            = yes
-            user            = root
-            server          = /usr/sbin/in.tftpd
-            server_args     = -s /home/tftpboot
-            disable         = no
-            per_source      = 11
-            cps             = 100 2
-            flags           = IPv4
-    }
-</code></pre></li>
+<pre><code> sudo vi /etc/xinetd.conf
+</code></pre>
+ <!-- -->
+<pre><code> # Simple configuration file for xinetd
+ # Some defaults, and include /etc/xinetd.d/
+ defaults
+ &#123;
+ # Please note that you need a log_type line to be able to use log_on_success
+ # and log_on_failure. The default is the following :
+ # log_type = SYSLOG daemon info
+ &#125;
+ includedir /etc/xinetd.d
+</code></pre>
+<p> 雖然我們可以將設定內容寫入此處，但還有更好的設定檔設定方法。用下列方法設定</p>
+<pre><code>     sudo vim /etc/xinetd.d/tftp
+ &lt;!-- --&gt; 
+     service tftp &#123;
+             socket_type     = dgram
+             protocol        = udp
+             wait            = yes
+             user            = root
+             server          = /usr/sbin/in.tftpd
+             server_args     = -s /home/tftpboot
+             disable         = no
+             per_source      = 11
+             cps             = 100 2
+             flags           = IPv4
+     &#125;
+</code></pre>
+</li>
 <li><p>重新讓xinetd讀入參數並重新啟動。</p>
-<pre><code>sudo /etc/init.d/xinetd reload
-sudo /etc/init.d/xinetd restart
-</code></pre></li>
+<pre><code> sudo /etc/init.d/xinetd reload
+ sudo /etc/init.d/xinetd restart
+</code></pre>
+</li>
 <li><p>檢查TFTP是否真的在運作</p>
-<pre><code>ls -l /tftpboot/
-</code></pre> <!-- -->
-<pre><code>total 0
--rwxrwxrwx 1 davids davids 0 2006-03-27 23:04 hda.txt
-</code></pre> <!-- -->    
-<pre><code>tftp 192.168.1.100
-tftp&gt; put hda.txt
-</code></pre> <!-- --> 
-<pre><code>Sent 722 bytes in 0.0 seconds
-</code></pre> <!-- -->
-<pre><code>tftp&gt; quit
-</code></pre> <!-- -->
-<pre><code>ls -l /tftpboot/
-</code></pre> <!-- -->
-<pre><code>total 4
--rwxrwxrwx  1 davids davids 707 2006-03-27 23:07 hda.txt
-</code></pre><p> 看到以上訊息，恭喜你，你已經設定成功啦！ 完成設定後將放置於TFTP的檔案移至 /tftpboot 目錄下。(注意tftpboot資料夾檔案的權限)</p>
-<pre><code>sudo mkdir /home/tftpboot
-sudo chmod -R 777 /home/tftpboot
-sudo chown -R nobody /tftpboot
-</code></pre></li>
+<pre><code> ls -l /tftpboot/
+</code></pre>
+ <!-- -->
+<pre><code> total 0
+ -rwxrwxrwx 1 davids davids 0 2006-03-27 23:04 hda.txt
+</code></pre>
+ <!-- -->    
+<pre><code> tftp 192.168.1.100
+ tftp&gt; put hda.txt
+</code></pre>
+ <!-- --> 
+<pre><code> Sent 722 bytes in 0.0 seconds
+</code></pre>
+ <!-- -->
+<pre><code> tftp&gt; quit
+</code></pre>
+ <!-- -->
+<pre><code> ls -l /tftpboot/
+</code></pre>
+ <!-- -->
+<pre><code> total 4
+ -rwxrwxrwx  1 davids davids 707 2006-03-27 23:07 hda.txt
+</code></pre>
+<p> 看到以上訊息，恭喜你，你已經設定成功啦！ 完成設定後將放置於TFTP的檔案移至 &#x2F;tftpboot 目錄下。(注意tftpboot資料夾檔案的權限)</p>
+<pre><code> sudo mkdir /home/tftpboot
+ sudo chmod -R 777 /home/tftpboot
+ sudo chown -R nobody /tftpboot
+</code></pre>
+</li>
 </ol>
 
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Linux-網卡設定VLAN-802-1Q/">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Linux-%E7%B6%B2%E5%8D%A1%E8%A8%AD%E5%AE%9AVLAN-802-1Q/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Neil Lee">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neil's Blog">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/16/Linux-網卡設定VLAN-802-1Q/" itemprop="url">(Linux) 網卡設定VLAN(802.1Q)</a></h2>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/02/16/Linux-%E7%B6%B2%E5%8D%A1%E8%A8%AD%E5%AE%9AVLAN-802-1Q/" class="post-title-link" itemprop="url">(Linux) 網卡設定VLAN(802.1Q)</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-16T21:09:25+08:00">
-                2018-02-16
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-              
+              <time title="Created: 2018-02-16 21:09:25" itemprop="dateCreated datePublished" datetime="2018-02-16T21:09:25+08:00">2018-02-16</time>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-03-28 16:19:33" itemprop="dateModified" datetime="2022-03-28T16:19:33+08:00">2022-03-28</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1000,172 +1405,109 @@ sudo chown -R nobody /tftpboot
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <ol>
+          <ol>
 <li><p>安裝VLAN(802.1Q)</p>
-<pre><code>apt-get install vlan
-</code></pre></li>
+<pre><code> apt-get install vlan
+</code></pre>
+</li>
 <li><p>Load the 8021q kernel module</p>
-<pre><code>sudo modprobe 8021q
-</code></pre></li>
-<li><p>Ensure that this module gets loaded after a reboot by adding to /etc/modules:</p>
-<pre><code>sudo  sh -c &apos;grep -q 8021q /etc/modules || echo 8021q &gt;&gt; /etc/modules&apos;
-</code></pre></li>
+<pre><code> sudo modprobe 8021q
+</code></pre>
+</li>
+<li><p>Ensure that this module gets loaded after a reboot by adding to &#x2F;etc&#x2F;modules:</p>
+<pre><code> sudo  sh -c &#39;grep -q 8021q /etc/modules || echo 8021q &gt;&gt; /etc/modules&#39;
+</code></pre>
+</li>
 <li><p>替網卡加入VLAN</p>
-<pre><code>sudo vconfig add eth0 100
-sudo vconfig add &lt;Ether Card&gt; &lt;VID&gt;
-sudo vconfig delete &lt;Ether Card&gt; &lt;VID&gt;
-</code></pre></li>
+<pre><code> sudo vconfig add eth0 100
+ sudo vconfig add &lt;Ether Card&gt; &lt;VID&gt;
+ sudo vconfig delete &lt;Ether Card&gt; &lt;VID&gt;
+</code></pre>
+</li>
 <li><p>設定每個網卡對應VLAN的IP, netmask</p>
-<pre><code>sudo ifconfig eth0.100 192.168.100.1 netmask 255.255.255.0
-sudo ifconfig eth0.&lt;VID&gt; &lt;IP&gt; netmask 255.255.255.0
-</code></pre></li>
-</ol>
-<ol>
-<li><p>測試VLAN是否作用,Ping 192.168.100.1/24,使用wireshark錄eth0封包</p>
+<pre><code> sudo ifconfig eth0.100 192.168.100.1 netmask 255.255.255.0
+ sudo ifconfig eth0.&lt;VID&gt; &lt;IP&gt; netmask 255.255.255.0
+</code></pre>
+</li>
+<li><p>測試VLAN是否作用,Ping 192.168.100.1&#x2F;24,使用wireshark錄eth0封包</p>
 </li>
 <li><p>永久設定每個網卡對應VLAN的IP, netmask</p>
-<pre><code>sudo vim /etc/network/interfaces
-</code></pre> <!-- -->
-<pre><code>auto eth0.100
-iface eth0.100 inet static
-address 192.168.100.1
-netmask 255.255.255.0
-</code></pre></li>
+<pre><code> sudo vim /etc/network/interfaces
+</code></pre>
+ <!-- -->
+<pre><code> auto eth0.100
+ iface eth0.100 inet static
+ address 192.168.100.1
+ netmask 255.255.255.0
+</code></pre>
+</li>
 </ol>
 
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
+  
+  
+  
 
-
-    
       
-
-  
-
   
   
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Embeded-System-SPI-Serial-peripheral-interface-bus/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Neil Lee">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Neil's Blog">
     </span>
-
-    
       <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/16/Embeded-System-SPI-Serial-peripheral-interface-bus/" itemprop="url">(Embeded system) SPI, Serial peripheral interface bus</a></h2>
-        
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/02/16/Embeded-System-SPI-Serial-peripheral-interface-bus/" class="post-title-link" itemprop="url">(Embeded system) SPI, Serial peripheral interface bus</a>
+        </h2>
 
         <div class="post-meta">
-          <span class="post-time">
-            
+            <span class="post-meta-item">
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="far fa-calendar"></i>
               </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-16T21:01:35+08:00">
-                2018-02-16
-              </time>
-            
+              <span class="post-meta-item-text">Posted on</span>
 
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Embeded-system/" itemprop="url" rel="index">
-                    <span itemprop="name">Embeded system</span>
-                  </a>
-                </span>
-
-                
-                
-              
+              <time title="Created: 2018-02-16 21:01:35" itemprop="dateCreated datePublished" datetime="2018-02-16T21:01:35+08:00">2018-02-16</time>
             </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-03-28 16:19:33" itemprop="dateModified" datetime="2022-03-28T16:19:33+08:00">2022-03-28</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Embeded-system/" itemprop="url" rel="index"><span itemprop="name">Embeded system</span></a>
+                </span>
+            </span>
 
           
 
         </div>
       </header>
-    
 
     
     
@@ -1173,19 +1515,12 @@ netmask 255.255.255.0
     <div class="post-body" itemprop="articleBody">
 
       
-      
-
-      
-        
-          
-            <ol>
+          <ol>
 <li><p>SPI通訊應用：</p>
 <ul>
-<li>大多應用Microcontroller，與Microcontroller，或其他週邊如：EEPROM、Shift Register、Display driever、A/D Converter等，進行通訊。</li>
+<li>大多應用Microcontroller，與Microcontroller，或其他週邊如：EEPROM、Shift Register、Display driever、A&#x2F;D Converter等，進行通訊。</li>
 </ul>
 </li>
-</ol>
-<ol>
 <li><p>SPI介面包含：</p>
 <ul>
 <li>SS (Slave Select)</li>
@@ -1194,32 +1529,30 @@ netmask 255.255.255.0
 <li>SDO (Serial Data Output)</li>
 </ul>
 </li>
-</ol>
-<ol>
 <li><p>SPI接續說明：</p>
 <ul>
 <li><p>SPI是一種4線全雙工同步序列通訊協定，採用Master-Slave控制方式；可採Single Master對Single Slave，也可採Single Master對Multi-Slave進行接續。</p>
 <ul>
 <li><p>其中Single Master對Multi-Slave接續方式，具有：</p>
 <ul>
-<li><p>一般接續方式：Master使用多組SS Pin來接續不同Slave，每次傳送/接收時，透過不同SS Pin，來決定與哪組Slave進行通訊。</p>
+<li><p>一般接續方式：Master使用多組SS Pin來接續不同Slave，每次傳送&#x2F;接收時，透過不同SS Pin，來決定與哪組Slave進行通訊。</p>
 </li>
-<li><p>Daisy-Chain接續方式：Master使用1組SS Pin來接續多個Slave，不同Slave裝置，SDI/ SDO串接在一起，如同Shifte Register。<br>(<a href="http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus" target="_blank" rel="noopener">http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus</a><br><a href="http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus" target="_blank" rel="noopener">http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus</a>)</p>
-</li>
-</ul>
+<li><p>Daisy-Chain接續方式：Master使用1組SS Pin來接續多個Slave，不同Slave裝置，SDI&#x2F; SDO串接在一起，如同Shifte Register。<br>  (<a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus">http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus</a><br>   <a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus">http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus</a>)</p>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p>SPI傳輸/接收方法：</p>
+</ul>
+</li>
+<li><p>SPI傳輸&#x2F;接收方法：</p>
 <ul>
-<li><p>當Slave的SS腳位被拉為Low准位時，此Slave在Master開始送出Clock信號後，將與Master，透過SPI Pin與SDO Pin進行傳送/接收。</p>
+<li><p>當Slave的SS腳位被拉為Low准位時，此Slave在Master開始送出Clock信號後，將與Master，透過SPI Pin與SDO Pin進行傳送&#x2F;接收。</p>
 <ul>
-<li>其中Clock信號，可依照idle State為high/ low；以及傳輸資料時，是由clock idle至clock active，或clock active至clock idle分為4種波形。</li>
+<li>其中Clock信號，可依照idle State為high&#x2F; low；以及傳輸資料時，是由clock idle至clock active，或clock active至clock idle分為4種波形。</li>
 </ul>
 <ul>
-<li>Master要進行資料傳送時，SCK才會有Clock信號,因此SPI傳輸/接收，可依下面3種狀況進行：<ul>
+<li>Master要進行資料傳送時，SCK才會有Clock信號,因此SPI傳輸&#x2F;接收，可依下面3種狀況進行：<ul>
 <li>Master與Slave皆要進行資料傳輸與接收：Master sends useful data and slave sends useful data.</li>
 <li>僅Master進行資料傳輸：Master sends useful data and slave sends dummy data.</li>
 <li>僅Master進行資料接收：Master sends dummy data and slave useful dummy data.</li>
@@ -1231,1115 +1564,24 @@ netmask 255.255.255.0
 </li>
 </ol>
 
-          
-        
       
     </div>
-    
-    
-    
 
     
-
     
-
     
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
+      <footer class="post-footer">
         <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
+      </footer>
   </article>
-
-
-    
-      
-
-  
-
   
   
   
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Embeded-System-I2C-Inter-Integrated-Circuit-Bus/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Neil Lee">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Neil's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/16/Embeded-System-I2C-Inter-Integrated-Circuit-Bus/" itemprop="url">(Embeded system) I2C, Inter-Integrated Circuit Bus</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-16T13:44:32+08:00">
-                2018-02-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Embeded-system/" itemprop="url" rel="index">
-                    <span itemprop="name">Embeded system</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><p>I2C通訊應用：</p>
-<ul>
-<li>於Microcontroller中，利用兩根通用的輸入輸出接腳及軟體的規劃，可以讓微控制器控制一個小型網路。週邊應用部份包含，AD Converter、DA Converter、RTC等。</li>
-</ul>
-</li>
-<li><p>I2C介面包含：</p>
-<ul>
-<li>SCL (Serial Clock)，由Master產生Clock信號。</li>
-<li>SDA (Serial Data)，SDA使用一上拉電阻，將電壓準位拉為High。</li>
-</ul>
-</li>
-<li><p>I2C接續說明：</p>
-<ul>
-<li>I2C是一種單工同步串列通訊協定，採用2線接續(SCL、SDA)，為Multi-Master - Muti-Slave架構，將所有裝置的SCL並聯、SDA並聯。(<a href="http://zh.wikipedia.org/wiki/I%C2%B2C" target="_blank" rel="noopener">http://zh.wikipedia.org/wiki/I%C2%B2C</a>)</li>
-</ul>
-</li>
-<li><p>I2C通訊說明：</p>
-<ul>
-<li>I2C採用7 bits /10 bits Address進行Slave定址，符合Master定址的Slave裝置，與Master進行通訊。</li>
-</ul>
-</li>
-<li><p>I2C專有名詞：</p>
-<ul>
-<li>Idle State：SDA與SCL皆為High，2 Bus未被任一Master裝置佔用。</li>
-<li>Active State：SDA與SCL被任一Master裝置佔用。</li>
-<li>Start Condition：Master發出的訊號 (SCL為high時，使SDA由high-&gt;low)。</li>
-<li><p>Addressed Slave：</p>
-<ul>
-<li><p>使用7bits address定址：<br>Master傳送Start Condition後,會傳送7 bits Address、1 bit Read/ Write Request，<br>共1Byte的資料至SDA上,Slave裝置的address，若與該address相符, 將會回覆ACK給Master裝置，並開始進行Transmit/ Receive</p>
-</li>
-<li><p>使用10bits address定址：<br>Master傳送Start Condition後，之後會先傳送11110、10th Address、<br>9th bit Address、1 bit Read/ Write Request，共1Byte的資料至SDA上，<br>Slave裝置的address，若與該address相符，將會回覆ACK給Master裝置，<br>Master再傳送8th~1th address，共1Byte的資料至SDA上，Slave裝置的address，若與該address相符，將會回覆ACK給Master裝置。</p>
-</li>
-<li><p>Read / Write Request</p>
-<ul>
-<li>若Read/ Write Request為low，Addressed Slave將進行Data接收；</li>
-<li>若Read/ Write Request為high，Addressed Slave將進行Data傳送；</li>
-</ul>
-</li>
-<li><p>Acknowledge</p>
-<ul>
-<li>Receiver (Master/ Slave)接收每一Byte Address or Data後，會回覆ACK或NACK給Transmitter((Master/ Slave)),告知Transmitter是否繼續通訊。</li>
-</ul>
-</li>
-<li><p>Clock Stretching：<br>Slave利用將SCL維持拉至Low，來暫停通訊,可獲得時間處理接收資料，通常再Acknowledge前或Acknowledge後實施。</p>
-</li>
-<li><p>Stop/ Restart Condition：</p>
-<ul>
-<li>若Master想結束通訊，釋放SDA和SCL，使Bus重新處於Idle狀態，可發送Stop Condition (SCL為high時，使SDA由low-&gt;high)。</li>
-<li>若Master不想釋放SDA和SCL，重新進行Addressed Slave和Read/ Write Request,可再次發送Start Condition，稱之Restart Condition  (SCL為high時，使SDA由high-&gt;low)。</li>
-</ul>
-</li>
-<li><p>Bus Collision and Arbitration</p>
-<ul>
-<li>Bus Collision: 當兩個裝置以上，通常為兩個master裝置，同時使用SDA，SCL時，進行資料傳送；當然也有可能是兩個slave裝置(ex:兩個slave設定相同address)，但這情況非一般狀況。</li>
-</ul>
-</li>
-<li><p>Arbitration:</p>
-<ul>
-<li>確保同時間一個master裝置佔住Bus傳輸的方法，當進行傳輸時，若傳送high準位時，會觀察輸出的準位是否為high，若為low的話，則進行停止傳送；因此，若兩裝置(A,B)同時進行傳送時，其中一裝置A輸出為low準位，另一裝置B輸出為high準位，則裝置A贏得Arbitration，可以確保訊息不被篡改。 (<a href="http://www.2cm.com.tw/technologyshow_content.asp?sn=0701010539" target="_blank" rel="noopener">http://www.2cm.com.tw/technologyshow_content.asp?sn=0701010539</a>)</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Gitolite-Server-on-MAC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Neil Lee">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Neil's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/16/Gitolite-Server-on-MAC/" itemprop="url">Gitolite Server on MAC</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-16T13:37:00+08:00">
-                2018-02-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Software-engineering/" itemprop="url" rel="index">
-                    <span itemprop="name">Software engineering</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Software-engineering/Revision-control/" itemprop="url" rel="index">
-                    <span itemprop="name">Revision control</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Software-engineering/Revision-control/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MAC/" itemprop="url" rel="index">
-                    <span itemprop="name">MAC</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Gitolite Server，是一款基於Perl語言開發的Git管理工具,<br>使用SSH Key認證,可依不同使用者，對Repo、Branch、Tag,<br>進行不同授權(讀取、重置、創建、刪除等)</p>
-<p><strong>Gitolite server在MAC上安裝與建置方法：</strong>  </p>
-<ul>
-<li><p>Step1: 安裝Gitolite server</p>
-<pre><code>git clone git://github.com/sitaramc/gitolite
-gitolite/install -to -ln /usr/local/bin
-</code></pre></li>
-<li>Step2: 產生1組ssh key</li>
-<li>Step3: 將Public Key Copy至gitolite server底下</li>
-<li><p>Step4: 產生Gitolite Administrator</p>
-<pre><code>gitolite setup -pk /path/to/YourName.pub
-</code></pre></li>
-<li>Step5: Administrator管理用戶<ul>
-<li>建立一般用戶：</li>
-<li>設定一般用戶權限：</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/MAC-MacPorts/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Neil Lee">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Neil's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/16/MAC-MacPorts/" itemprop="url">(MAC) MacPorts</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-16T13:36:57+08:00">
-                2018-02-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MAC/" itemprop="url" rel="index">
-                    <span itemprop="name">MAC</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Debian/ Ubuntu的套件管理工具有apt-get<br>RedHat/ Suse的套件管理工具有yum<br>相對應的MAC的套件管理工具則有MacPorts</p>
-<ul>
-<li><p><strong>安裝方法</strong></p>
-<ul>
-<li>可以根據MAC OS版本(Sierra, El Capitan, Yosemite,…)直接下載.pkg檔案</li>
-<li><a href="https://www.macports.org/install.php" target="_blank" rel="noopener">https://www.macports.org/install.php</a>  </li>
-<li>執行.pkg 檔案，按照步驟提示完成安裝，就可以完成 MacPorts 的基礎安裝</li>
-</ul>
-</li>
-<li><p><strong>使用方法</strong></p>
-<ul>
-<li>安裝後系統提供一個port命令列指令。</li>
-<li><p>打開終端機程式，先進行軟體清單更新。</p>
-<pre><code>sudo port -d selfupdate
-</code></pre></li>
-<li><p>列出所有軟體使用：</p>
-<pre><code>port list
-</code></pre></li>
-<li><p>搜尋某個軟體：</p>
-<pre><code>port search &lt;name&gt; 
-</code></pre></li>
-<li><p>安裝個軟體，則使用：</p>
-<pre><code>port install &lt;name&gt;
-</code></pre></li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/MAC-Git-Gerrit-Server/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Neil Lee">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Neil's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/16/MAC-Git-Gerrit-Server/" itemprop="url">(MAC)(Git) Gerrit Server</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-16T13:36:54+08:00">
-                2018-02-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Software-engineering/" itemprop="url" rel="index">
-                    <span itemprop="name">Software engineering</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Software-engineering/Revision-control/" itemprop="url" rel="index">
-                    <span itemprop="name">Revision control</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MAC/" itemprop="url" rel="index">
-                    <span itemprop="name">MAC</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>Git on MAC [By Homebrew]</strong></p>
-<ol>
-<li><p>Install XCode for (GCC tools)</p>
-</li>
-<li><p>Install Homebrew</p>
-<pre><code>ruby -e &quot;$(curl -fsSL https://gist.github.com/raw/323731/install_homebrew.rb)&quot;
-</code></pre></li>
-<li><p>Install Git (By homebrew)</p>
-<pre><code>brew install git
-</code></pre></li>
-<li><p>brew list</p>
-<pre><code>brew list git
-</code></pre></li>
-</ol>
-<p><strong>Git on MAC [By Macports]</strong></p>
-<ol>
-<li><p>Install Macports</p>
-</li>
-<li><p>Install Git (By Macports)</p>
-<pre><code>sudo port install git-core
-</code></pre></li>
-</ol>
-<p><strong>Gerrit on MAC:</strong></p>
-<ol>
-<li><p>Install MYSQL</p>
-<ul>
-<li>Get Mysql from official site (Mysql Community version)</li>
-</ul>
-</li>
-<li><p>Get Mysql Java Connector (Connector/J, .jar)</p>
-<ul>
-<li>Copy to  /Library/Java/Extensions/</li>
-</ul>
-</li>
-<li><p>Setup Mysql-DB</p>
-<pre><code>mysql -u root -p
-CREATE USER &apos;gerrit&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;password&apos;;
-CREATE DATABASE reviewdb;
-ALTER DATABASE reviewdb charset=latin1;
-GRANT ALL ON reviewdb.* TO &apos;gerrit&apos;@&apos;localhost&apos;;
-FLUSH PRIVILEGES;
-</code></pre></li>
-<li><p>Get Gerrit from <a href="http://code.google.com/p/gerrit/downloads/list" target="_blank" rel="noopener">http://code.google.com/p/gerrit/downloads/list</a></p>
-</li>
-<li><p>Install Gerrit</p>
-<pre><code>java -jar gerrit.war init -d review_sit
-</code></pre></li>
-<li><p>Setup Gerrit Authentication by Http </p>
-</li>
-<li><p>Setup Apache /etc/apache2/httpd.conf as:</p>
-<pre><code>Listen 9090
-#Gerrit Reverse Apache for Authentication
-&lt;VirtualHost *:9090&gt;
-  ServerName Gerrit
-  ProxyRequests Off
-  ProxyVia Off
-  ProxyPreserveHost On
-  &lt;Proxy *&gt;
-        Order deny,allow
-        Allow from all
-  &lt;/Proxy&gt;
-  &lt;Location /gerrit/login/&gt;
-     AuthType Basic
-     AuthName &quot;Gerrit Code Review&quot;
-     AuthBasicProvider file
-     AuthUserFile /Users/shiunyi/gerrit/review_site/etc/gerrit.passwd
-     Require valid-user
-  &lt;/Location&gt;
-  ProxyPass /gerrit/ http://localhost:8081/gerrit/
-&lt;/VirtualHost&gt;
-</code></pre></li>
-<li><p>Setup account of Gerrit</p>
-<pre><code>htpasswd -m /Users/shiunyi/gerrit/review_site/etc/gerrit.passwd NeilLee
-</code></pre></li>
-<li><p>Start Gerrit</p>
-<pre><code>gerrit/review_site/bin/gerrit.sh start
-</code></pre></li>
-<li><p>Web login</p>
-<p> <a href="http://192.168.11.5:9090/gerrit/" target="_blank" rel="noopener">http://192.168.11.5:9090/gerrit/</a></p>
-</li>
-<li><p>gerrit.config</p>
-<pre><code>[gerrit]
-        basePath = git
-[database]
-        type = MYSQL
-        hostname = localhost
-        database = reviewdb
-        username = gerrit
-[auth]
-        type = HTTP
-[sendemail]
-        enable = true
-        smtpServer = smtp.gmail.com
-        smtpServerPort = 465
-        smtpEncryption = SSL
-        smtpUser = user@gmail.com
-        smtpPass = 
-        user = gerrit
-        javaHome = /System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
-[sshd]
-        listenAddress = *:29418
-[httpd]
-        listenUrl = proxy-http://*:8081/gerrit
-[cache]
-        directory = cache
-</code></pre></li>
-<li><p>Using Gerrit</p>
-<ul>
-<li><p>SSH authentication</p>
-<ul>
-<li><p>client:</p>
-<pre><code>ssh-keygen -t rsa
-pbcopy &lt; ~/.ssh/id_rsa.pub
-</code></pre></li>
-</ul>
-</li>
-<li><p>Gerrit server:</p>
-<ul>
-<li>Add your ssh key to gerrit</li>
-<li>Restart gerrit server<!-- --></li>
-</ul>
-</li>
-<li><p>Gerrit client: </p>
-<pre><code>ssh -p 29418 &lt;your username in gerrit&gt;@&lt;gerrit&apos;s IP&gt;
-</code></pre></li>
-</ul>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Gitweb-Server-on-MAC/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Neil Lee">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Neil's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/16/Gitweb-Server-on-MAC/" itemprop="url">Gitweb Server on MAC</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-02-16T13:36:51+08:00">
-                2018-02-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Software-engineering/" itemprop="url" rel="index">
-                    <span itemprop="name">Software engineering</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Software-engineering/Revision-control/" itemprop="url" rel="index">
-                    <span itemprop="name">Revision control</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Software-engineering/Revision-control/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MAC/" itemprop="url" rel="index">
-                    <span itemprop="name">MAC</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><p><strong>安裝gitweb</strong></p>
-<pre><code>git clone git://git.kernel.org/pub/scm/git/git.git
-cd git/
-sudo make GITWEB_PROJECTROOT=&quot;/Users/&lt;user&gt;/repositories&quot; \
-GITWEB_CSS=&quot;/gitweb/gitweb.css&quot; \
-GITWEB_LOGO=&quot;/gitweb/git-logo.png&quot;  \
-GITWEB_FAVICON=&quot;/gitweb/git-favicon.png&quot;  \
-bindir=//usr/local/bin \
-gitweb
-
-sudo make gitwebdir=/var/www/gitweb install-gitweb
-</code></pre></li>
-<li><p><strong>設定gitweb</strong></p>
-  <figure class="highlight plain"><figcaption><span>vim</span><a href="/etc/gitweb.conf```">link</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">        projectroot = &quot;/Users/&lt;user&gt;/repositories&quot;;</span><br><span class="line">        GIT = &quot;/usr/local/bin/git&quot; #重要-git執行擋的位置</span><br><span class="line">* **設定apache**</span><br><span class="line"></span><br><span class="line">    ```sudo vim /etc/apache2/httpd.conf</span><br></pre></td></tr></table></figure>
-<pre><code>Listen 8080
-#Gitweb        
-&lt;VirtualHost *:8080&gt;        
-    ServerName gitserver        
-    DocumentRoot /var/www/gitweb        
-    SetEnv GITWEB_CONFIG /etc/gitweb.conf        
-    &lt;Directory /var/www/gitweb&gt;        
-        Options ExecCGI +FollowSymLinks +SymLinksIfOwnerMatch        
-        AllowOverride All        
-        order allow,deny        
-        Allow from all        
-        AddHandler cgi-script cgi        
-        DirectoryIndex gitweb.cgi        
-    &lt;/Directory&gt;        
-&lt;/VirtualHost&gt;
-</code></pre></li>
-<li><p><strong>設定repo目錄權限</strong> </p>
-<ul>
-<li>目錄權限如果不對,gitweb無法顯示專案<br><code>chmod -R 755 /Users/&lt;user&gt;/repositories</code></li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
   </nav>
 
 
@@ -2347,152 +1589,134 @@ sudo make gitwebdir=/var/www/gitweb install-gitweb
           </div>
           
 
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">Neil Lee</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">26</span>
-                  <span class="site-state-item-name">文章</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                <a href="/categories/index.html">
-                  <span class="site-state-item-count">15</span>
-                  <span class="site-state-item-name">分類</span>
-                </a>
-              </div>
-            
-
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Neil Lee</span>
-
-  
-</div>
-
-
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 強力驅動</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主題 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
   }
 </script>
 
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Neil Lee</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Neil Lee</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
 
 
 
 
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
 
 
 
@@ -2510,107 +1734,8 @@ sudo make gitwebdir=/var/www/gitweb install-gitweb
 
 
 
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
 
 
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
 
   
 
