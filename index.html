@@ -155,6 +155,127 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/11/02/Linux-VSCode-Docker-CAndCpp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Neil Lee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/11/02/Linux-VSCode-Docker-CAndCpp/" class="post-title-link" itemprop="url">(Linux)(VSCode)(Docker) Visual Studio Code use remote conainter to develop C and CPP program.</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2022-11-02 10:20:08" itemprop="dateCreated datePublished" datetime="2022-11-02T10:20:08+08:00">2022-11-02</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming-language/" itemprop="url" rel="index"><span itemprop="name">Programming language</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Software-engineering/" itemprop="url" rel="index"><span itemprop="name">Software engineering</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming-language/C/" itemprop="url" rel="index"><span itemprop="name">C</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming-language/C/" itemprop="url" rel="index"><span itemprop="name">C++</span></a>
+                </span>
+                  , 
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Software-engineering/Development/" itemprop="url" rel="index"><span itemprop="name">Development</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="安裝操作"><a href="#安裝操作" class="headerlink" title="安裝操作"></a>安裝操作</h2><h3 id="使用docker-buildfile建立VSCode-C-x2F-CPP-docker-Image"><a href="#使用docker-buildfile建立VSCode-C-x2F-CPP-docker-Image" class="headerlink" title="使用docker buildfile建立VSCode C&#x2F;CPP docker Image"></a>使用docker buildfile建立VSCode C&#x2F;CPP docker Image</h3><h4 id="步驟"><a href="#步驟" class="headerlink" title="步驟"></a>步驟</h4><ol>
+<li><p>從<a target="_blank" rel="noopener" href="https://hub.docker.com/microsoft-vscode-devcontainers">Microsoft Dockerhub</a>取得VSCode C&#x2F;CPP docker </p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Docker buildfile</span></span><br><span class="line">FROM mcr.microsoft.com/vscode/devcontainers/cpp:ubuntu-20.04</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安裝GCC&#x2F;GDB toolchain, CMake</p>
+ <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Docker buildfile</span></span><br><span class="line">RUN apt-get --<span class="built_in">yes</span> install build-essential</span><br><span class="line">RUN apt-get --<span class="built_in">yes</span> install gdb</span><br><span class="line">RUN apt-get --<span class="built_in">yes</span> install cmake </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用範例<code>build.sh</code>安裝Image,安裝完成後,使用範例<code>run.sh</code>執行container</p>
+</li>
+<li><p>打開Vscode,選取<strong>Remote Explorer</strong>-&gt;<strong>Containers</strong>-&gt;<strong>Dev Containers</strong>-&gt;<strong>C</strong>(範例Container name),滑鼠右鍵點選<strong>Attach to Container</strong></p>
+</li>
+<li><p>VsCode打開工作區<strong>File</strong>-&gt;<strong>Open Folder</strong></p>
+</li>
+<li><p>編寫程式<strong>File</strong>-&gt;<strong>New File</strong>-&gt;<strong>main.c</strong></p>
+</li>
+</ol>
+  <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;hello world\n&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="7">
+<li>執行程式<strong>Run</strong>-&gt;<strong>Run Without Debug</strong><h4 id="VSCode-CMake"><a href="#VSCode-CMake" class="headerlink" title="VSCode CMake"></a>VSCode CMake</h4></li>
+<li>完成上面的Vscode C docker container</li>
+<li>安裝VSCode CMake Extension,<strong>Extensions</strong>-&gt;<strong>Search</strong>-&gt;<strong>CMake</strong>, <strong>CMake Tools</strong></li>
+<li>設定CMake toolchain,<strong>View</strong>-&gt;<strong>Command Palette</strong>-&gt;<strong>CMake:Select a Kit</strong>-&gt;<strong>GCC</strong><br>或者點選VSCode視窗最下方狀態列工具圖示</li>
+<li>設定CMake Build Target,<strong>View</strong>-&gt;<strong>Command Palette</strong>-&gt;<strong>CMake:Set Build Target</strong>-&gt;<strong>Folder name[Executable]</strong><br>或者點選VSCode視窗最下方狀態列三角形圖示</li>
+<li>設定CMake Debug,<strong>View</strong>-&gt;<strong>Command Palette</strong>-&gt;<strong>CMake:Set Debug Target</strong>‘</li>
+<li>執行程式<strong>Run</strong>-&gt;<strong>Run Without Debug</strong></li>
+<li>除錯程式<strong>Run</strong>-&gt;<strong>Debug</strong>,可在<strong>Debug console</strong>使用<code>-exec &lt;gdb command&gt;</code>進行除錯,也可透過GUI工具<h4 id="範例"><a href="#範例" class="headerlink" title="範例"></a>範例</h4></li>
+</ol>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/NeilLeeGo/Docker/tree/master/vscode-c">https://github.com/NeilLeeGo/Docker/tree/master/vscode-c</a></li>
+</ul>
+<h3 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/remote/containers">https://code.visualstudio.com/docs/remote/containers</a></li>
+<li><a target="_blank" rel="noopener" href="https://hub.docker.com/_/microsoft-vscode-devcontainers">https://hub.docker.com/_/microsoft-vscode-devcontainers</a></li>
+<li><a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/cpp/cmake-linux">https://code.visualstudio.com/docs/cpp/cmake-linux</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/10/31/Linux-Ubuntu-DebianPackage/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1458,127 +1579,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Embeded-System-SPI-Serial-peripheral-interface-bus/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Neil Lee">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Neil's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2018/02/16/Embeded-System-SPI-Serial-peripheral-interface-bus/" class="post-title-link" itemprop="url">(Embeded system) SPI, Serial peripheral interface bus</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2018-02-16 21:01:35" itemprop="dateCreated datePublished" datetime="2018-02-16T21:01:35+08:00">2018-02-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-03-28 16:19:33" itemprop="dateModified" datetime="2022-03-28T16:19:33+08:00">2022-03-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Embeded-system/" itemprop="url" rel="index"><span itemprop="name">Embeded system</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol>
-<li><p>SPI通訊應用：</p>
-<ul>
-<li>大多應用Microcontroller，與Microcontroller，或其他週邊如：EEPROM、Shift Register、Display driever、A&#x2F;D Converter等，進行通訊。</li>
-</ul>
-</li>
-<li><p>SPI介面包含：</p>
-<ul>
-<li>SS (Slave Select)</li>
-<li>SCK (Serial Clock)</li>
-<li>SDI (Serial Data Input)</li>
-<li>SDO (Serial Data Output)</li>
-</ul>
-</li>
-<li><p>SPI接續說明：</p>
-<ul>
-<li><p>SPI是一種4線全雙工同步序列通訊協定，採用Master-Slave控制方式；可採Single Master對Single Slave，也可採Single Master對Multi-Slave進行接續。</p>
-<ul>
-<li><p>其中Single Master對Multi-Slave接續方式，具有：</p>
-<ul>
-<li><p>一般接續方式：Master使用多組SS Pin來接續不同Slave，每次傳送&#x2F;接收時，透過不同SS Pin，來決定與哪組Slave進行通訊。</p>
-</li>
-<li><p>Daisy-Chain接續方式：Master使用1組SS Pin來接續多個Slave，不同Slave裝置，SDI&#x2F; SDO串接在一起，如同Shifte Register。<br>  (<a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus">http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus</a><br>   <a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus">http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus</a>)</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>SPI傳輸&#x2F;接收方法：</p>
-<ul>
-<li><p>當Slave的SS腳位被拉為Low准位時，此Slave在Master開始送出Clock信號後，將與Master，透過SPI Pin與SDO Pin進行傳送&#x2F;接收。</p>
-<ul>
-<li>其中Clock信號，可依照idle State為high&#x2F; low；以及傳輸資料時，是由clock idle至clock active，或clock active至clock idle分為4種波形。</li>
-</ul>
-<ul>
-<li>Master要進行資料傳送時，SCK才會有Clock信號,因此SPI傳輸&#x2F;接收，可依下面3種狀況進行：<ul>
-<li>Master與Slave皆要進行資料傳輸與接收：Master sends useful data and slave sends useful data.</li>
-<li>僅Master進行資料傳輸：Master sends useful data and slave sends dummy data.</li>
-<li>僅Master進行資料接收：Master sends dummy data and slave useful dummy data.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1648,7 +1648,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

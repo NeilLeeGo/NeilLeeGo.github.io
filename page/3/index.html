@@ -155,6 +155,104 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Linux-SNMP-Client/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Neil Lee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/02/16/Linux-SNMP-Client/" class="post-title-link" itemprop="url">(Linux) SNMP Client</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-02-16 13:36:12" itemprop="dateCreated datePublished" datetime="2018-02-16T13:36:12+08:00">2018-02-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-03-28 16:19:33" itemprop="dateModified" datetime="2022-03-28T16:19:33+08:00">2022-03-28</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li><p>安裝SNMP Client</p>
+<pre><code> sudo apt-get install snmp
+</code></pre>
+</li>
+<li><p>SNMP Client config</p>
+<p> 2.1 設定檔 &#x2F;etc&#x2F;snmp&#x2F;snmp.conf內容如下</p>
+<pre><code> #MIB 所在資料夾
+ mibdirs /usr/share/snmp/mibs/
+ #使用的MIB
+ mibs CISCO-C2900-MIB:TCP-MIB:UDP-MIB
+</code></pre>
+<p>也可使用export command改變環境變數-所在資料夾MIB,與MIB</p>
+<pre><code> export MIBDIRS=/usr/share/snmp/mibs
+ export MIBS=CISCO-C2900-MIB
+</code></pre>
+</li>
+<li><p>SNMP Client Command 說明</p>
+<pre><code> snmpget  -v 2c -c  &lt;Server Community&gt; &lt;SNMP Server IP&gt; &lt;MIB&gt;:&lt;OID&gt;
+ snmpwalk  -v 2c -c  &lt;Server Community&gt; &lt;SNMP Server IP&gt; &lt;MIB&gt;:&lt;OID&gt; 
+ snmpset  -v 2c -c  &lt;Server Community&gt; &lt;SNMP Server IP&gt; &lt;MIB&gt;:&lt;OID&gt; &lt;Value Type&gt; &lt;Value&gt;
+</code></pre>
+<p> 其中2c為snmp version, 需與 sever 端配合,大多是 2c 版,Community習慣設 Public</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Linux-Redmine-server-Project-management-Issue-tracking/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1509,95 +1607,6 @@ dhclient eth0.11
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Linux-Bash-Communcating-to-telnet-or-serial-port/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Neil Lee">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Neil's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2018/02/16/Linux-Bash-Communcating-to-telnet-or-serial-port/" class="post-title-link" itemprop="url">(Linux) (Bash) Communcating to telnet or serial port</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              <time title="Created: 2018-02-16 13:35:04" itemprop="dateCreated datePublished" datetime="2018-02-16T13:35:04+08:00">2018-02-16</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2022-03-28 16:19:33" itemprop="dateModified" datetime="2022-03-28T16:19:33+08:00">2022-03-28</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>[Telnet]</strong></p>
-<ul>
-<li><p>寫入command至telnet 終端:</p>
-<pre><code> (echo &quot;command&quot;) | telnet 192.168.1.1
-</code></pre>
-</li>
-</ul>
-<p><strong>[Serial port]</strong> </p>
-<ul>
-<li><p>使用stty設定serial port</p>
-<pre><code>  stty -F /dev/ttyS0 speed 9600 -icrnl
-  stty -F &lt;dev&gt; speed  &lt;baudrate&gt; -icrnl
-</code></pre>
-<p>  *-crnl: translate carriage return to a newline </p>
-</li>
-<li><p>寫入 command至serial port:</p>
-<pre><code>  (echo &quot;command&quot;) | &gt; /dev/ttyS0
-</code></pre>
-</li>
-<li><p>讀取serial port上回傳值:</p>
-<pre><code>  cat /dev/ttyS0
-  read /dev/ttyS0 &gt; /dev/tty
-</code></pre>
-</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1667,7 +1676,7 @@ dhclient eth0.11
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

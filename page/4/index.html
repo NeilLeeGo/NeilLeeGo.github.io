@@ -155,6 +155,95 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Linux-Bash-Communcating-to-telnet-or-serial-port/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Neil Lee">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Neil's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2018/02/16/Linux-Bash-Communcating-to-telnet-or-serial-port/" class="post-title-link" itemprop="url">(Linux) (Bash) Communcating to telnet or serial port</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2018-02-16 13:35:04" itemprop="dateCreated datePublished" datetime="2018-02-16T13:35:04+08:00">2018-02-16</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2022-03-28 16:19:33" itemprop="dateModified" datetime="2022-03-28T16:19:33+08:00">2022-03-28</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p><strong>[Telnet]</strong></p>
+<ul>
+<li><p>寫入command至telnet 終端:</p>
+<pre><code> (echo &quot;command&quot;) | telnet 192.168.1.1
+</code></pre>
+</li>
+</ul>
+<p><strong>[Serial port]</strong> </p>
+<ul>
+<li><p>使用stty設定serial port</p>
+<pre><code>  stty -F /dev/ttyS0 speed 9600 -icrnl
+  stty -F &lt;dev&gt; speed  &lt;baudrate&gt; -icrnl
+</code></pre>
+<p>  *-crnl: translate carriage return to a newline </p>
+</li>
+<li><p>寫入 command至serial port:</p>
+<pre><code>  (echo &quot;command&quot;) | &gt; /dev/ttyS0
+</code></pre>
+</li>
+<li><p>讀取serial port上回傳值:</p>
+<pre><code>  cat /dev/ttyS0
+  read /dev/ttyS0 &gt; /dev/tty
+</code></pre>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-tw">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/16/Embeded-System-Microchip-Hint-for-HITECH-C-Compilier/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -392,7 +481,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-count">32</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
